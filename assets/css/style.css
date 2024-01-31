@@ -1,3 +1,19 @@
+/* Fonts
+font-family: 'Inter', sans-serif;
+font-family: 'Merriweather', serif;
+*/
+
+/* Universal Settings */
+:root{
+    scroll-behavior: smooth;
+    --body-font: 'Inter', sans-serif;
+    --header-font: 'Merriweather', serif;
+}
+
+*{
+    font-family: var(--body-font);
+}
+
 /* Navbar  */
 .customNav {
     padding: 20px;
@@ -36,4 +52,32 @@
 .btn {
     background-color: #83C2AF;
     border: none;
+}
+
+/* Second page */
+#secondPage{
+    height: 100vh;
+    font-weight: 300;
+    font-size: 45px;
+}
+
+#locationInfo{
+    height: 80vh;
+}
+
+#locationInfo h3{
+    font-family: var(--header-font);
+}
+
+#mapArea{
+    height: 80vh;
+    background-image: url(../images/PLACEHOLDER\ mapAreaImage.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#locationImage{
+    background-image: url(../images/PLACEHOLDER\ locationInfoImage.jpg);
+    background-position: center;
+    background-size: cover;
 }
