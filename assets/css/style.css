@@ -71,7 +71,13 @@ font-family: 'Merriweather', serif;
 
 #mapArea{
     height: 80vh;
-    background-image: url(../images/map\ placeholder\ image.png);
+    background-image: url(../images/PLACEHOLDER\ mapAreaImage.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#locationImage{
+    background-image: url(../images/PLACEHOLDER\ locationInfoImage.jpg);
     background-position: center;
     background-size: cover;
 }
