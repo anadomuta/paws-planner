@@ -56,9 +56,9 @@
       <!-- Second page -->
       <div class="container-fluid border" id="secondPage">
             <div class="container row mx-auto my-5">
-                  <div class="col-12 col-lg-5 ">
+                  <div class="col-12 col-lg-5">
                         <!-- location info container element -->
-                        <div class="border rounded rounded-4 w-100" id="locationInfo">
+                        <div class="border rounded rounded-4 w-100 h-100" id="locationInfo">
                               <!-- background image of user's searched location -->
                               <div class="m-3 pb-5 border rounded rounded-3" id="locationImage">
                                     <h3 class="mx-3 my-2 p-2 text-center border rounded rounded-3 bg-light bg-opacity-75">What's on nearby?</h3>
@@ -140,10 +140,12 @@
                               </div>
                         </div>
                   </div>
-                  <div class="col-12 col-lg-7 border rounded rounded-4">
-                        <!-- map container element -->
-                        <div id="mapContainer" class="container mx-auto my-5 rounded rounded-4 border">
-                              <div id="map" style="height: 400px; object-fit: cover;"></div>
+                  <div class="col-12 col-lg-7">
+                        <div class="border rounded rounded-4 w-100 h-100">
+                              <!-- map container element -->
+                              <div id="mapContainer">
+                                    <div id="map" class="rounded-4" style="object-fit: cover; overflow: hidden;"></div>
+                              </div>
                         </div>
                   </div>
             
