@@ -57,7 +57,7 @@ font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
 }
 
 #searchButton {
-    margin-top: 15px;
+    margin-top: 15px; /* Adjust the value as needed */
 }
 
 /* Second page */
