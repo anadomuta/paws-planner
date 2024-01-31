@@ -14,6 +14,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
       <!-- Custom CSS -->
       <link rel="stylesheet" href="./assets/css/style.css" />
       <title>Travel Atlas</title>
@@ -145,14 +146,20 @@
                         <!-- map filter options container -->
                         <div>
                               <p>
-                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#mapcontrols" aria-expanded="false" aria-controls="mapcontrols">
                                           Map Options
                                     </button>
                               </p>
                               <div style="min-height: 120px;">
-                                    <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                                          <div class="card card-body" style="width: 300px;">
-                                                This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+                                    <div class="collapse collapse-horizontal" id="mapcontrols">
+                                          <div class="card card-body">
+                                                <div class="list-group">
+                                                      <button type="button" class="list-group-item list-group-item-action"> current button</button>
+                                                      <button type="button" class="list-group-item list-group-item-action">A second button item</button>
+                                                      <button type="button" class="list-group-item list-group-item-action">A third button item</button>
+                                                      <button type="button" class="list-group-item list-group-item-action">A fourth button item</button>
+                                                      <button type="button" class="list-group-item list-group-item-action">A disabled button item</button>
+                                                </div>
                                           </div>
                                     </div>
                               </div>

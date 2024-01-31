@@ -91,3 +91,6 @@ h1, h2, h3, h4{
     overflow-x: auto;
 }
 
+#mapcontrols .list-group{
+    font-size: 0.85rem;
+}
