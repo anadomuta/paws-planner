@@ -1,3 +1,8 @@
+/* Universal Settings */
+*{
+    scroll-behavior: smooth;
+}
+
 /* Navbar  */
 .customNav {
     padding: 20px;
@@ -36,4 +41,20 @@
 .btn {
     background-color: #83C2AF;
     border: none;
+}
+
+/* Second page */
+#secondPage{
+    height: 100vh;
+}
+
+#locationInfo{
+    height: 80vh;
+}
+
+#mapArea{
+    height: 80vh;
+    background-image: url(../images/map\ placeholder\ image.png);
+    background-position: center;
+    background-size: cover;
 }
