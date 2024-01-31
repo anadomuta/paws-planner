@@ -1,3 +1,39 @@
-body {
-    background-color: aqua;
+/* Navbar  */
+.customNav {
+    padding: 20px;
+}
+
+/* Jumbotron  */
+.cityBackground {
+    height: calc(100vh - 25px);
+    background-image: url(../images/background-image.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customJumbo {
+    height: 80%;
+    padding: 10px;
+    text-align: center;
+}
+
+#logo {
+    height: 80%;
+    align-items: center;
+}
+
+.search-area {
+    background-color: #EDEDE3;
+    width: 80%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn {
+    background-color: #83C2AF;
+    border: none;
 }
