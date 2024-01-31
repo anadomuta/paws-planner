@@ -1,13 +1,14 @@
 /* Fonts
 font-family: 'Inter', sans-serif;
 font-family: 'Merriweather', serif;
+font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
 */
 
 /* Universal Settings */
 :root{
     scroll-behavior: smooth;
-    --body-font: 'Inter', sans-serif;
-    --header-font: 'Merriweather', serif;
+    --body-font: '-apple-system, BlinkMacSystemFont, sans-serif'
+    --header-font: '-apple-system, BlinkMacSystemFont, sans-serif'
 }
 
 *{
@@ -22,7 +23,7 @@ font-family: 'Merriweather', serif;
 /* Jumbotron  */
 .cityBackground {
     height: calc(100vh - 25px);
-    background-image: url(../images/background-image.PNG);
+    background-image: url(../images/background-image-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -47,11 +48,16 @@ font-family: 'Merriweather', serif;
     max-width: 680px;
     margin: 0 auto;
     padding: 20px;
+    border-radius: 25px;
 }
 
 .btn {
     background-color: #83C2AF;
     border: none;
+}
+
+#searchButton {
+    margin-top: 15px; /* Adjust the value as needed */
 }
 
 /* Second page */
