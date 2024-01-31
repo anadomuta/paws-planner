@@ -14,6 +14,10 @@ font-family: 'Merriweather', serif;
     font-family: var(--body-font);
 }
 
+h1, h2, h3, h4{
+    font-family: var(--header-font);
+}
+
 /* Navbar  */
 .customNav {
     padding: 20px;
@@ -56,13 +60,14 @@ font-family: 'Merriweather', serif;
 
 /* Second page */
 #secondPage{
-    height: 100vh;
+    min-height: 100vh;
     font-weight: 300;
     font-size: 45px;
 }
 
 #locationInfo{
-    height: 80vh;
+    min-height: 80vh;
+    font-size: 0.85rem;
 }
 
 #locationInfo h3{
@@ -70,7 +75,7 @@ font-family: 'Merriweather', serif;
 }
 
 #mapArea{
-    height: 80vh;
+    height: 100%;
     background-image: url(../images/PLACEHOLDER\ mapAreaImage.png);
     background-position: center;
     background-size: cover;
@@ -81,3 +86,8 @@ font-family: 'Merriweather', serif;
     background-position: center;
     background-size: cover;
 }
+
+#eatCardContainer{
+    overflow-x: scroll;
+}
+
