@@ -51,23 +51,19 @@
         </div>
       <!-- End jumbotron -->
 
-      <!-- Map Area -->
-    <div id="mapContainer" class="container my-5">
-      <div id="map" style="height: 400px;"></div>
-    </div>
-  <!-- End Map Area -->
+
 
       <!-- Second page -->
       <div class="container-fluid border" id="secondPage">
             <div class="container row mx-auto my-5">
-                  <div class="col-12 col-lg-5 d-flex align-items-start justify-content-center">
+                  <div class="col-12 col-lg-5 ">
                         <!-- location info container element -->
                         <div class="border rounded rounded-4 w-100" id="locationInfo">
                               <!-- background image of user's searched location -->
                               <div class="m-3 pb-5 border rounded rounded-3" id="locationImage">
                                     <h3 class="mx-3 my-2 p-2 text-center border rounded rounded-3 bg-light bg-opacity-75">What's on nearby?</h3>
                                     <form type="search-area2">
-                                          <h5><input class="mx-3 my-2 p-2 text-center border rounded rounded-3 text-body-secondary bg-light bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h5>
+                                          <h5 class="text-center"><input class="mx-3 my-2 p-2 text-center border rounded rounded-3 text-body-secondary bg-light bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h5>
                                     </form>
                               </div>
                               <div class="m-3 p-2 border rounded rounded-3 no-wrap" id="eatPlaces">
@@ -144,31 +140,11 @@
                               </div>
                         </div>
                   </div>
-                  <!-- map container element -->
-                  <div class="col-12 col-lg-7">
-                        <div class="border rounded rounded-4" id="mapArea"></div>
-                        <!-- map filter options container -->
-                        <div>
-                              <p>
-                                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#mapcontrols" aria-expanded="false" aria-controls="mapcontrols">
-                                          Map Options
-                                    </button>
-                              </p>
-                              <div style="min-height: 120px;">
-                                    <div class="collapse collapse-horizontal" id="mapcontrols">
-                                          <div class="card card-body">
-                                                <div class="row">
-                                                      <div class="col-3 px-3 text-center"><button class="btn btn-sm rounded"><i class="bi bi-zoom-in"></i></button></div>
-                                                      <div class="col-3 px-3 text-center"><button class="btn btn-sm rounded"><i class="bi bi-zoom-out"></i></button></div>
-                                                      <div class="col-3 px-3 text-center"><button class="btn btn-sm rounded"><i class="bi bi-3-square-fill"></i></button></div>
-                                                      <div class="col-3 px-3 text-center"><button class="btn btn-sm rounded"><i class="bi bi-4-square-fill"></i></button></div>
-                                                </div>
-                                          </div>
-                                    </div>
-                              </div>
+                  <div class="col-12 col-lg-7 border rounded rounded-4">
+                        <!-- map container element -->
+                        <div id="mapContainer" class="container mx-auto my-5 rounded rounded-4 border">
+                              <div id="map" style="height: 400px; object-fit: cover;"></div>
                         </div>
-
-
                   </div>
             
                   
