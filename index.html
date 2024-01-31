@@ -39,14 +39,15 @@
       <!-- Jumbotron -->
       <div class="p-5 mb-4 bg-body-tertiary cityBackground">
             <div class="container py-5 customJumbo">
-                  <img src="./assets/images/logo.PNG" alt="Travel Atlas Logo" id="logo">
-                  <div class="search-area">
-                        <p class="col-md-12 fs-2">Where would you like to go?</p>
-                        <input class="form-control ms-1" type="text" placeholder="London">
-                        <button class="btn btn-lg ms-3" type="button">Search</button>
-                  </div>
+                <img src="./assets/images/logo.PNG" alt="Travel Atlas Logo" id="logo">
+                <div class="search-area">
+                    <p class="col-md-12 fs-2">Where would you like to go?</p>
+                    <!-- Added input id for location and search button -->
+                    <input id="locationInput" class="form-control ms-1" type="text" placeholder="London"> 
+                    <button id="searchButton" class="btn btn-lg ms-3" type="button">Search</button>
+                </div>
             </div>
-      </div>
+        </div>
       <!-- End jumbotron -->
 
 
@@ -76,6 +77,7 @@
 
 
       <!-- jQuery scripts -->
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
       <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
       <!-- Custom JS scripts -->
