@@ -1,6 +1,17 @@
+/* Fonts
+font-family: 'Inter', sans-serif;
+font-family: 'Merriweather', serif;
+*/
+
 /* Universal Settings */
-*{
+:root{
     scroll-behavior: smooth;
+    --body-font: 'Inter', sans-serif;
+    --header-font: 'Merriweather', serif;
+}
+
+*{
+    font-family: var(--body-font);
 }
 
 /* Navbar  */
@@ -46,10 +57,16 @@
 /* Second page */
 #secondPage{
     height: 100vh;
+    font-weight: 300;
+    font-size: 45px;
 }
 
 #locationInfo{
     height: 80vh;
+}
+
+#locationInfo h3{
+    font-family: var(--header-font);
 }
 
 #mapArea{
