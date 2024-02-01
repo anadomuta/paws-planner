@@ -1,14 +1,13 @@
 /* Fonts
 font-family: 'Inter', sans-serif;
 font-family: 'Merriweather', serif;
-font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
-*/
+font-family: 'Noto Sans;,
 
 /* Universal Settings */
 :root{
     scroll-behavior: smooth;
-    --body-font: '-apple-system, BlinkMacSystemFont, sans-serif'
-    --header-font: '-apple-system, BlinkMacSystemFont, sans-serif'
+    --body-font: 'Noto Sans', serif;
+    --header-font: 'Noto Sans', sans-serif;
 }
 
 *{
