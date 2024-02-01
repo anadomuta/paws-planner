@@ -41,26 +41,22 @@
       <!-- Jumbotron -->
       <div class="p-5 mb-4 bg-body-tertiary cityBackground">
             <div class="container py-5 customJumbo">
-<<<<<<< HEAD
-                <img src="./assets/images/logo.PNG" alt="Travel Atlas Logo" id="logo">
-                <div class="search-area">
-                    <p class="col-md-12 fs-2">Where would you like to go?</p>
-                    <!-- Added input id for location and search button -->
-                    <input id="locationInput" class="form-control ms-1" type="text" placeholder="City, Town, Postcode/Zip Code"> 
-                    <button id="searchButton" class="btn btn-lg ms-3" type="button">Search</button>
-                </div>
-=======
                   <img src="./assets/images/logo.PNG" alt="Travel Atlas Logo" id="logo">
                   <div class="search-area">
                         <p class="col-md-12 fs-2">Where would you like to go?</p>
                         <!-- Added input id for location and search button -->
-                        <input id="locationInput" class="form-control ms-1" type="text" placeholder="London">
+                        <input id="locationInput" class="form-control ms-1" type="text"
+                              placeholder="City, Town, Postcode/Zip Code">
                         <button id="searchButton" class="btn btn-lg ms-3" type="button">Search</button>
                   </div>
->>>>>>> a530dc2ecf9f8b45343a9ab67db83b29818351ab
             </div>
       </div>
       <!-- End jumbotron -->
+
+      <!-- Map Container Element -->
+      <div id="mapContainer">
+            <div id="map" class="rounded-4" style="object-fit: cover; overflow: hidden;"></div>
+      </div>
 
       <!-- Bootstrap JS link -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
