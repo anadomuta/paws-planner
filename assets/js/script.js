@@ -47,5 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('searchButton').addEventListener('click', function () {
         const location = document.getElementById('locationInput').value;
         fetchData(location);
+        window.location.href = 'activities.html';
     });
+
 });

@@ -15,6 +15,10 @@ font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
     font-family: var(--body-font);
 }
 
+h1, h2, h3, h4{
+    font-family: var(--header-font);
+}
+
 /* Navbar  */
 .customNav {
     padding: 20px;
@@ -62,13 +66,15 @@ font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
 
 /* Second page */
 #secondPage{
-    height: 100vh;
+    min-height: 100vh;
     font-weight: 300;
     font-size: 45px;
 }
 
-#locationInfo{
-    height: 80vh;
+#locationInfo, #map{
+    height: 100vh;
+    overflow-y: auto;
+    font-size: 0.85rem;
 }
 
 #locationInfo h3{
@@ -76,7 +82,7 @@ font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
 }
 
 #mapArea{
-    height: 80vh;
+    height: 100%;
     background-image: url(../images/PLACEHOLDER\ mapAreaImage.png);
     background-position: center;
     background-size: cover;
@@ -87,3 +93,10 @@ font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
     background-position: center;
     background-size: cover;
 }
+
+#eatCardContainer, #activityCardContainer{
+    overflow-x: auto;
+    
+}
+
+/* map */
