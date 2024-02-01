@@ -14,6 +14,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
       <!-- Custom CSS -->
       <link rel="stylesheet" href="./assets/css/style.css" />
       <title>Travel Atlas</title>
@@ -50,36 +51,111 @@
         </div>
       <!-- End jumbotron -->
 
-      <!-- Map Area -->
-    <div id="mapContainer" class="container my-5">
-      <div id="map" style="height: 400px;"></div>
-    </div>
-  <!-- End Map Area -->
+
 
       <!-- Second page -->
       <div class="container-fluid border" id="secondPage">
             <div class="container row mx-auto my-5">
-                  <div class="col-12 col-lg-5 d-flex align-items-start justify-content-center">
-                        <div class="border rounded rounded-4 w-100" id="locationInfo">
+                  <div class="col-12 col-lg-5">
+                        <!-- location info container element -->
+                        <div class="border rounded rounded-4 w-100 h-100" id="locationInfo">
+                              <!-- background image of user's searched location -->
                               <div class="m-3 pb-5 border rounded rounded-3" id="locationImage">
                                     <h3 class="mx-3 my-2 p-2 text-center border rounded rounded-3 bg-light bg-opacity-75">What's on nearby?</h3>
                                     <form type="search-area2">
-                                          <h5><input class="mx-3 my-2 p-2 text-center border rounded rounded-3 text-body-secondary bg-light bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h5>
+                                          <h5 class="text-center"><input class="mx-3 my-2 p-2 text-center border rounded rounded-3 text-body-secondary bg-light bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h5>
                                     </form>
                               </div>
-                              <div class="m-3 p-2 border rounded rounded-3" id="restaurants">
-
+                              <div class="m-3 p-2 border rounded rounded-3 no-wrap" id="eatPlaces">
+                                    <h4 class="m-2 text-center">Places to Eat</h4>
+                                    <!-- container for place to append "places to eat" cards in JS -->
+                                    <div class="container d-flex flex-nowrap m-auto pb-2" id="eatCardContainer">
+                                          <!-- example card -->
+                                          <div class="card me-2 col-5">
+                                                <img src="./assets/images/PLACEHOLDER restaurant1Image.png" class="card-img-top img-fluid" alt="">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">${eatName}</h5>
+                                                      <h6 class="card-subtitle mb-2 text-body-secondary">${eatLocation}</h6>
+                                                      <p>${eatDistance}</p>
+                                                      <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                                </div>
+                                          </div>
+                                          <!-- example card -->
+                                          <div class="card me-2 col-5">
+                                                <img src="./assets/images/PLACEHOLDER restaurant1Image.png" class="card-img-top img-fluid" alt="">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">${eatName}</h5>
+                                                      <h6 class="card-subtitle mb-2 text-body-secondary">${eatLocation}</h6>
+                                                      <p>${eatDistance}</p>
+                                                      <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                                </div>
+                                          </div>
+                                          <!-- example card -->
+                                          <div class="card me-2 col-5">
+                                                <img src="./assets/images/PLACEHOLDER restaurant1Image.png" class="card-img-top img-fluid" alt="">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">${eatName}</h5>
+                                                      <h6 class="card-subtitle mb-2 text-body-secondary">${eatLocation}</h6>
+                                                      <p>${eatDistance}</p>
+                                                      <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="m-3 p-2 border rounded rounded-3 no-wrap" id="activityPlaces">
+                                    <h4 class="m-2 text-center">Things to Do</h4>
+                                    <!-- container for place to append "things to do" cards in JS -->
+                                    <div class="container d-flex flex-nowrap m-auto pb-2" id="activityCardContainer">
+                                          <!-- example card -->
+                                          <div class="card me-2 col-5">
+                                                <img src="./assets/images/PLACEHOLDER activityImage.jpg" class="card-img-top img-fluid" alt="">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">${activityName}</h5>
+                                                      <h6 class="card-subtitle mb-2 text-body-secondary">${activityLocation}</h6>
+                                                      <p>${activityDistance}</p>
+                                                      <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                                </div>
+                                          </div>
+                                          <!-- example card -->
+                                          <div class="card me-2 col-5">
+                                                <img src="./assets/images/PLACEHOLDER activityImage.jpg" class="card-img-top img-fluid" alt="">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">${activityName}</h5>
+                                                      <h6 class="card-subtitle mb-2 text-body-secondary">${activityLocation}</h6>
+                                                      <p>${activityDistance}</p>
+                                                      <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                                </div>
+                                          </div>
+                                          <!-- example card -->
+                                          <div class="card me-2 col-5">
+                                                <img src="./assets/images/PLACEHOLDER activityImage.jpg" class="card-img-top img-fluid" alt="">
+                                                <div class="card-body">
+                                                      <h5 class="card-title">${activityName}</h5>
+                                                      <h6 class="card-subtitle mb-2 text-body-secondary">${activityLocation}</h6>
+                                                      <p>${activityDistance}</p>
+                                                      <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
                         </div>
                   </div>
                   <div class="col-12 col-lg-7">
-                        <div class="border rounded rounded-4" id="mapArea"></div>
+                        <div class="border rounded rounded-4 w-100 h-100">
+                              <!-- map container element -->
+                              <div id="mapContainer">
+                                    <div id="map" class="rounded-4" style="object-fit: cover; overflow: hidden;"></div>
+                              </div>
+                        </div>
                   </div>
+            
+                  
             </div>
       </div>
 
 
-
+      <!-- Bootstrap JS link -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       <!-- jQuery scripts -->
       <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
       <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>

@@ -48,4 +48,5 @@ document.addEventListener('DOMContentLoaded', function () {
         const location = document.getElementById('locationInput').value;
         fetchData(location);
     });
+
 });
