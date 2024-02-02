@@ -5,7 +5,7 @@ font-family: 'Noto Sans', sans-serif;
 /* Universal Settings */
 :root{
     scroll-behavior: smooth;
-    --body-font: 'Noto Sans', serif;
+    --body-font: 'Noto Sans', sans-serif;
     --header-font: 'Cabinet Grotesk', 'Noto Sans', sans-serif;
 }
 
@@ -23,31 +23,27 @@ h1, h2, h3, h4{
     color: var(--bs-body-color);
 }
 
-nav:hover{
-    background-color: rgba(131, 194, 175, 0.15);
-}
-
 /* Jumbotron  */
 .cityBackground {
-    height: calc(100vh - 25px);
+    /* height: calc(100vh - 25px); */
     background-image: url(../images/background-image-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
-.customJumbo {
-    height: 80%;
+/* .customJumbo {
+    height: 100vh;
     padding: 10px;
     text-align: center;
-}
+} */
 
-#logo {
+/* #logo {
     height: 80%;
     align-items: center;
-}
+} */
 
 .search-area {
     background-color: #EDEDE3;
@@ -55,16 +51,19 @@ nav:hover{
     max-width: 680px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 25px;
 }
 
 .cityBackground .btn {
     background-color: #83C2AF;
     border: none;
+    transition: 0.75s ease-in-out;
 }
 
-#searchButton {
-    margin-top: 25px;
+.cityBackground .btn:hover {
+    background-color: #68e2be;
+    scale: 1.2;
+    border: none;
+    transition: 0.75s ease-in-out;
 }
 
 /* Second page */

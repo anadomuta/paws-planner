@@ -19,39 +19,40 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
       <!-- Custom CSS -->
       <link rel="stylesheet" href="./assets/css/style.css" />
-      <title>Travel Atlas</title>
+      <title>Paw Planner</title>
 </head>
 
 <body>
-      <!-- Navbar -->
-      <nav class="user-select-none m-4 rounded-3">
-            <ul class="nav py-2 px-3 rounded-3 border navbar-expand-lg bg-transparent d-flex justify-content-start align-items-center sticky-top">
-                  <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4" style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;">
-                  <h5 class="ms-2 me-5 my-0" style="font-family: 'Cabinet Grotesk', sans-serif;">Travel Atlas</h5>
-                  <li class="nav-item mx-3">
-                        <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="./index.html" title="Visit the home page."><i class="bi bi-house-heart-fill me-2"></i>Home</button>
-                  </li>
-                  <li class="nav-item mx-3">
-                        <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#" title="Read about our latest travels!"><i class="bi bi-blockquote-left me-2"></i>Blog</button>
-                  </li>
-            </ul>
-      </nav>
-      <!-- Navbar -->
+
 
       <!-- Jumbotron -->
-      <div class="p-5 mb-4 bg-body-tertiary cityBackground">
-            <div class="container py-5 customJumbo">
-                  <img src="./assets/images/logo.PNG" alt="Travel Atlas Logo" id="logo">
-                  <div class="search-area">
-                        <p class="col-md-12 fs-2">Where would you like to go?</p>
+      <div class="p-5 mb-4 bg-body-tertiary cityBackground d-flex align-items-center justify-content-center" id="home">
+            <div class="container p-5 text-center" style="height: 100vh;">
+                  <img class="m-5 p-5 h-50" src="./assets/images/logo.PNG" alt="Paw Planner Logo" id="logo">
+                  <div class="search-area rounded mb-5">
+                        <h1 class="col-md-12 mb-3">Where would you like to go?</h1>
                         <!-- Added input id for location and search button -->
-                        <input id="locationInput" class="form-control ms-1" type="text"
-                              placeholder="City, Town, Postcode/Zip Code">
-                        <button id="searchButton" class="btn btn-lg ms-3" type="button">Search</button>
+                        <h2><input id="locationInput" class="form-control mt-1 text-center" type="text" placeholder="City, Town, Postcode..." style="font-family: 'Cabinet Grotesk', sans-serif;"></h2>
+                        <h1><button id="searchButton" class="btn btn mt-3 px-5 py-2 rounded" type="button">Search</button></h1>
                   </div>
             </div>
       </div>
       <!-- End jumbotron -->
+
+      <!-- Navbar -->
+      <nav class="user-select-none p-3 rounded-3 sticky-top">
+            <ul class="nav py-2 px-3 rounded-3 border navbar-expand-lg bg-light bg-opacity-50 d-flex justify-content-start align-items-center sticky-top">
+                  <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4" style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;">
+                  <h5 class="ms-2 me-5 my-0" style="font-family: 'Cabinet Grotesk', sans-serif;">Paw Planner</h5>
+                  <li class="nav-item mx-3">
+                        <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="https://www.google.com" title="Visit the home page."><i class="bi bi-house-heart-fill m-0 me-md-2"></i><span class="d-none d-md-inline">Home</span></button>
+                  </li>
+                  <li class="nav-item mx-3">
+                        <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#" title="Read about our latest travels!"><i class="bi bi-blockquote-left m-0 me-md-2"></i><span class="d-none d-md-inline">Blog</span></button>
+                  </li>
+            </ul>
+      </nav>
+      <!-- Navbar -->
 
       <!-- Second page -->
       <div class="container-fluid user-select-none" id="secondPage" style="min-height: 110vh;">
@@ -59,12 +60,12 @@
             <div class="row rounded rounded-3 m-2 p-0" style="height: 60vh;">
             <div class="col-12 mh-100 p-0 position-relative">
                   <!-- map element -->
-                  <div id="mapContainer" class="col-12 w-auto h-100 position-relative top-0 start-0">
-                        <div id="map" class="rounded w-auto h-100" style="overflow: hidden;"></div>
+                  <div id="mapContainer" class="col-12 w-auto h-100 position-relative top-0 start-0" style="overscroll-behavior: contain;">
+                        <div id="map" class="rounded w-auto h-100"></div>
                   </div>
                   <!-- search bar -->
                   <form type="search-area2" class="mx-5 position-absolute bottom-0 start-50 translate-middle">
-                        <h1 class="text-center"><input class="px-5 py-2 text-center border rounded-3 text-body-light bg-dark bg-opacity-75" type="text" id="search-area2" placeholder="Search here..." style="font-family: 'Cabinet Grotesk', var(--body-font), sans-serif;"></h1>
+                        <h1 class="text-center"><input class="px-5 py-2 text-center border rounded-3 text-body-light bg-light bg-opacity-75" type="text" id="search-area2" placeholder="Search here..." style="font-family: 'Cabinet Grotesk', var(--body-font), sans-serif;"></h1>
                   </form>
             </div>
       </div>
