@@ -6,11 +6,12 @@ font-family: 'Noto Sans', sans-serif;
 :root{
     scroll-behavior: smooth;
     --body-font: 'Noto Sans', serif;
-    --header-font: 'Noto Sans', sans-serif;
+    --header-font: 'Cabinet Grotesk', 'Noto Sans', sans-serif;
 }
 
 *{
     font-family: var(--body-font);
+    transition: ease 0.5s;
 }
 
 h1, h2, h3, h4{
@@ -18,8 +19,12 @@ h1, h2, h3, h4{
 }
 
 /* Navbar  */
-.customNav {
-    padding: 20px;
+.nav-link{
+    color: var(--bs-body-color);
+}
+
+nav:hover{
+    background-color: rgba(131, 194, 175, 0.15);
 }
 
 /* Jumbotron  */
@@ -53,7 +58,7 @@ h1, h2, h3, h4{
     border-radius: 25px;
 }
 
-.btn {
+.cityBackground .btn {
     background-color: #83C2AF;
     border: none;
 }
@@ -66,11 +71,10 @@ h1, h2, h3, h4{
 #secondPage{
     min-height: 100vh;
     font-weight: 300;
-    font-size: 45px;
 }
 
 #locationInfo, #map{
-    height: 100vh;
+    /* max-height: 100vh; */
     overflow-y: auto;
     font-size: 0.85rem;
 }
@@ -79,22 +83,11 @@ h1, h2, h3, h4{
     font-family: var(--header-font);
 }
 
-#mapArea{
-    height: 100%;
-    background-image: url(../images/PLACEHOLDER\ mapAreaImage.png);
-    background-position: center;
-    background-size: cover;
-}
-
-#locationImage{
-    background-image: url(../images/PLACEHOLDER\ locationInfoImage.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
 #eatCardContainer, #activityCardContainer{
-    overflow-x: auto;
-    
+    overflow-x: auto;   
 }
 
-/* map */
+.monoText{
+    font-family: monospace;
+    font-size: 0.8rem;
+}
