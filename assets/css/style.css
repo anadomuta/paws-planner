@@ -46,24 +46,11 @@ h1, h2, h3, h4{
 } */
 
 .search-area {
-    background-color: #EDEDE3;
+    background-color: rgba(237, 237, 227, 0.7);
     width: 80%;
     max-width: 680px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.cityBackground .btn {
-    background-color: #83C2AF;
-    border: none;
-    transition: 0.5s ease-in-out;
-}
-
-.cityBackground .btn:hover {
-    background-color: #68e2be;
-    scale: 1.2;
-    border: none;
-    transition: 0.5s ease-in-out;
 }
 
 /* Second page */
@@ -89,4 +76,29 @@ h1, h2, h3, h4{
 .monoText{
     font-family: monospace;
     font-size: 0.8rem;
+}
+
+
+/* Animations / Transitions */
+.cityBackground .btn {
+    background-color: #003d42;
+    transition: 0.5s ease-in-out;
+}
+
+.cityBackground .btn:hover {
+    background-color: #00988c;
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+}
+
+#navLogo{transition: 0.5s ease;}
+#navLogo:hover{
+    scale:1.2;
+    rotate: 20deg;
+    transition: 0.5s ease;
+}
+
+nav ul{background-color: rgba(var(--bs-light-rgb),0.5);}
+nav ul:hover{
+    background-color: rgba(var(--bs-light-rgb),1);
 }
