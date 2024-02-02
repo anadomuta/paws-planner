@@ -56,14 +56,14 @@ h1, h2, h3, h4{
 .cityBackground .btn {
     background-color: #83C2AF;
     border: none;
-    transition: 0.75s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .cityBackground .btn:hover {
     background-color: #68e2be;
     scale: 1.2;
     border: none;
-    transition: 0.75s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 /* Second page */
