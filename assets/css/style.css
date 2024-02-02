@@ -22,28 +22,23 @@ h1, h2, h3, h4{
 .nav-link{
     color: var(--bs-body-color);
 }
+.nav-link:hover{
+    color: white;
+}
 
 /* Jumbotron  */
 .cityBackground {
-    /* height: calc(100vh - 25px); */
     background-image: url(../images/background-image-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
-/* .customJumbo {
-    height: 100vh;
-    padding: 10px;
-    text-align: center;
-} */
-
-/* #logo {
-    height: 80%;
-    align-items: center;
-} */
+#pageTitle{
+    font-size: 7rem; 
+    font-family: 'Protest Riot'; 
+    color: #013e41;
+    /* text-shadow: whitesmoke 0px 5px; */
+}
 
 .search-area {
     background-color: rgba(237, 237, 227, 0.7);
@@ -60,7 +55,6 @@ h1, h2, h3, h4{
 }
 
 #locationInfo, #map{
-    /* max-height: 100vh; */
     overflow-y: auto;
     font-size: 0.85rem;
 }
