@@ -13,6 +13,7 @@ font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
 
 *{
     font-family: var(--body-font);
+    transition: ease 0.5s;
 }
 
 h1, h2, h3, h4{
@@ -22,6 +23,10 @@ h1, h2, h3, h4{
 /* Navbar  */
 .nav-link{
     color: var(--bs-body-color);
+}
+
+nav:hover{
+    background-color: rgba(131, 194, 175, 0.25);
 }
 
 /* Jumbotron  */
