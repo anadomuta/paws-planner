@@ -88,6 +88,6 @@ nav:hover{
 }
 
 .monoText{
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: monospace;
     font-size: 0.8rem;
 }
