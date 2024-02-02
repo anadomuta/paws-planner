@@ -68,11 +68,10 @@ h1, h2, h3, h4{
 #secondPage{
     min-height: 100vh;
     font-weight: 300;
-    font-size: 45px;
 }
 
 #locationInfo, #map{
-    height: 100vh;
+    /* max-height: 100vh; */
     overflow-y: auto;
     font-size: 0.85rem;
 }
