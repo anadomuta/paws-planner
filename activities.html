@@ -23,22 +23,22 @@
 
 <body>
     <!-- Navbar -->
-    <nav>
+    <nav class="user-select-none">
         <ul class="nav m-4 py-2 px-3 rounded-3 border navbar-expand-lg bg-transparent d-flex justify-content-start align-items-center sticky-top" style="font-family: 'Cabinet Grotesk';">
             <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4" style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;">
             <h5 class="ms-2 me-5 my-0">Travel Atlas</h5>
             <li class="nav-item mx-3">
-                <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#">Home</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#"><i class="bi bi-house-heart-fill me-2"></i>Home</button>
             </li>
             <li class="nav-item mx-3">
-                <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#">Blog</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#"><i class="bi bi-blockquote-left me-2"></i>Blog</button>
             </li>
         </ul>
     </nav>
     <!-- Navbar -->
 
     <!-- Second page -->
-    <div class="container-fluid border border-danger" id="secondPage" style="min-height: 110vh;">
+    <div class="container-fluid border border-danger user-select-none" id="secondPage" style="min-height: 110vh;">
 
         <div class="row border" style="min-height: 50vh;">
             <!-- <div id="mapContainer" class="col-12">
@@ -47,23 +47,23 @@
         </div>
         <div class="row container mx-auto" style="min-height: 60vh;">
             <!-- Current Weather Conditions -->
-            <div class="col-12 col-md-3 weatherContainer border">
-                <h2 class="m-2 text-center">Current Weather</h2>
+            <div class="col-12 col-lg-4 weatherContainer border">
+                <h2 class="m-4 text-center"><i class="bi bi-cloud-sun me-2"></i> Current Weather</h2>
                 <div id="todayWeather"></div>
             </div>
-            <div class="col-12 col-md-9 border" id="whatsonnearby">
-                <h2 class="m-2 text-center">What's on Nearby?</h2>
+            <div class="col-12 col-lg-8 border" id="whatsonnearby">
+                <h2 class="m-4 text-center"><i class="bi bi-ticket-detailed me-2"></i>What's on Nearby?</h2>
 
                 <form type="search-area2">
                     <h5 class="text-center"><input class="mx-3 my-2 p-2 text-center border rounded rounded-3 text-body-secondary bg-dark bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h5>
                 </form>
 
                 <div class="m-3 p-2 border rounded rounded-3 no-wrap" id="eatPlaces">
-                    <h4 class="m-2 text-center">Places to Eat</h4>
+                    <h4 class="m-2 mb-3 text-center">Places to Eat</h4>
                     <!-- container for place to append "places to eat" cards in JS -->
                     <div class="container d-flex flex-nowrap m-auto pb-2" id="eatCardContainer">
                         <!-- example card -->
-                        <div class="card me-2 col-5">
+                        <div class="card me-2 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
                                 class="card-img-top img-fluid" alt="">
                             <div class="card-body">
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <!-- example card -->
-                        <div class="card me-2 col-5">
+                        <div class="card me-2 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
                                 class="card-img-top img-fluid" alt="">
                             <div class="card-body">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <!-- example card -->
-                        <div class="card me-2 col-5">
+                        <div class="card me-2 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
                                 class="card-img-top img-fluid" alt="">
                             <div class="card-body">
@@ -102,11 +102,11 @@
                 </div>
 
                 <div class="m-3 p-2 border rounded rounded-3 no-wrap" id="activityPlaces">
-                    <h4 class="m-2 text-center">Things to Do</h4>
+                    <h4 class="m-2 mb-3 text-center">Things to Do</h4>
                     <!-- container for place to append "things to do" cards in JS -->
                     <div class="container d-flex flex-nowrap m-auto pb-2" id="activityCardContainer">
                         <!-- example card -->
-                        <div class="card me-2 col-5">
+                        <div class="card me-2 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER activityImage.jpg" class="card-img-top img-fluid"
                                 alt="">
                             <div class="card-body">
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                         <!-- example card -->
-                        <div class="card me-2 col-5">
+                        <div class="card me-2 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER activityImage.jpg" class="card-img-top img-fluid"
                                 alt="">
                             <div class="card-body">
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         <!-- example card -->
-                        <div class="card me-2 col-5">
+                        <div class="card me-2 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER activityImage.jpg" class="card-img-top img-fluid"
                                 alt="">
                             <div class="card-body">

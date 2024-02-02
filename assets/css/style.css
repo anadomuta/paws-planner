@@ -20,8 +20,8 @@ h1, h2, h3, h4{
 }
 
 /* Navbar  */
-.customNav {
-    padding: 20px;
+.nav-link{
+    color: var(--bs-body-color);
 }
 
 /* Jumbotron  */
@@ -82,16 +82,10 @@ h1, h2, h3, h4{
 
 #mapArea{
     height: 100%;
-    background-image: url(../images/PLACEHOLDER\ mapAreaImage.png);
     background-position: center;
     background-size: cover;
 }
 
-#locationImage{
-    background-image: url(../images/PLACEHOLDER\ locationInfoImage.jpg);
-    background-position: center;
-    background-size: cover;
-}
 
 #eatCardContainer, #activityCardContainer{
     overflow-x: auto;
