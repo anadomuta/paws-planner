@@ -25,7 +25,7 @@
 <body>
     <!-- Navbar -->
     <nav class="user-select-none m-4 rounded-3">
-        <ul class="nav py-2 px-3 rounded-3 border navbar-expand-lg bg-transparent d-flex justify-content-start align-items-center sticky-top" style="font-family: 'Cabinet Grotesk';">
+        <ul class="nav py-2 px-3 rounded-3 border navbar-expand-lg bg-transparent d-flex justify-content-start align-items-center sticky-top">
             <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4" style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;">
             <h5 class="ms-2 me-5 my-0">Travel Atlas</h5>
             <li class="nav-item mx-3">
@@ -42,14 +42,14 @@
     <div class="container-fluid user-select-none" id="secondPage" style="min-height: 110vh;">
         <!-- map -->
         <div class="row rounded rounded-3 m-2 p-0" style="height: 60vh;">
-            <div class="col-12 mh-100 p-0">
+            <div class="col-12 mh-100 p-0 position-relative">
                 <!-- map element -->
-                <div id="mapContainer" class="col-12 w-auto h-100 border border-danger">
-                    <div id="map" class="rounded w-auto h-100 border border-info" style="overflow: hidden;"></div>
+                <div id="mapContainer" class="col-12 w-auto h-100 position-relative top-0 start-0">
+                    <div id="map" class="rounded w-auto h-100" style="overflow: hidden;"></div>
                 </div>
                 <!-- search bar -->
-                <form type="search-area2" class="position-absolute border border-danger">
-                    <h6 class="text-center"><input class="mx-3 my-2 p-2 text-center border rounded text-body-secondary bg-dark bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h6>
+                <form type="search-area2" class="mx-5 position-absolute bottom-0 start-50 translate-middle">
+                    <h6 class="text-center"><input class="px-5 py-2 text-center border rounded text-body-secondary bg-dark bg-opacity-75" type="text" id="search-area2" placeholder="Search again." style="font-family: monospace;"></h6>
                 </form>
             </div>
         </div>

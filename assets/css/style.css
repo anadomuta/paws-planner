@@ -6,7 +6,7 @@ font-family: 'Noto Sans', sans-serif;
 :root{
     scroll-behavior: smooth;
     --body-font: 'Noto Sans', serif;
-    --header-font: 'Noto Sans', sans-serif;
+    --header-font: 'Cabinet Grotesk', 'Noto Sans', sans-serif;
 }
 
 *{
@@ -24,7 +24,7 @@ h1, h2, h3, h4{
 }
 
 nav:hover{
-    background-color: rgba(131, 194, 175, 0.25);
+    background-color: rgba(131, 194, 175, 0.15);
 }
 
 /* Jumbotron  */
