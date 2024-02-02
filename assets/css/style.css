@@ -1,6 +1,4 @@
 /* Fonts
-font-family: 'Inter', sans-serif;
-font-family: 'Merriweather', serif;
 font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
 */
 
@@ -92,8 +90,4 @@ nav:hover{
 .monoText{
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.8rem;
-}
-
-.card-title, .card-subtitle{
-    font-family: 'Cabinet Grotesk', sans-serif;
 }
