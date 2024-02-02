@@ -1,12 +1,12 @@
 /* Fonts
-font-family: 'SF Pro' (using their public use name 'BlinkMacSystemFont'
-*/
+font-family: 'Inter', sans-serif;
+font-family: 'Noto Sans', sans-serif;
 
 /* Universal Settings */
 :root{
     scroll-behavior: smooth;
-    --body-font: '-apple-system, BlinkMacSystemFont, sans-serif'
-    --header-font: '-apple-system, BlinkMacSystemFont, sans-serif'
+    --body-font: 'Noto Sans', serif;
+    --header-font: 'Noto Sans', sans-serif;
 }
 
 *{
@@ -64,7 +64,7 @@ nav:hover{
 }
 
 #searchButton {
-    margin-top: 15px; /* Adjust the value as needed */
+    margin-top: 25px;
 }
 
 /* Second page */
