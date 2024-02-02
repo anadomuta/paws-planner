@@ -85,20 +85,13 @@ nav:hover{
     font-family: var(--header-font);
 }
 
-#mapArea{
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-
 #eatCardContainer, #activityCardContainer{
     overflow-x: auto;   
 }
 
 .monoText{
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .card-title, .card-subtitle{
