@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -22,32 +22,35 @@
 </head>
 
 <body>
-    <header>
-        <!-- Navbar -->
-        <nav>
-            <ul class="nav justify-content-end navbar-expand-lg bg-body-tertiary customNav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- Navbar -->
-    </header>
+    <!-- Navbar -->
+    <nav>
+        <ul class="nav m-4 py-2 px-3 rounded-3 border navbar-expand-lg bg-transparent d-flex justify-content-start align-items-center sticky-top" style="font-family: 'Cabinet Grotesk';">
+            <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4" style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;">
+            <h5 class="ms-2 me-5 my-0">Travel Atlas</h5>
+            <li class="nav-item mx-3">
+                <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#">Home</button>
+            </li>
+            <li class="nav-item mx-3">
+                <button type="button" class="btn btn-outline-secondary btn-sm nav-link py-1 px-3" href="#">Blog</button>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar -->
 
     <!-- Second page -->
     <div class="container-fluid border" id="secondPage">
         <div class="container row mx-auto my-5">
             <div class="col-12 col-lg-5">
+                
                 <!-- location info container element -->
                 <div class="border rounded rounded-4 w-100 h-100" id="locationInfo">
+                    
                     <!-- Current Weather Conditions -->
                     <div class="m-3 pb-5 border d-none rounded rounded-3 weatherContainer text-center">
                         <h4 class="m-2 text-center">Current Weather</h4>
                         <div id="todayWeather"></div>
                     </div>
+                    
                     <!-- background image of user's searched location -->
                     <div class="m-3 pb-5 border rounded rounded-3" id="locationImage">
                         <h3 class="mx-3 my-2 p-2 text-center border rounded rounded-3 bg-light bg-opacity-75">
@@ -101,6 +104,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="m-3 p-2 border rounded rounded-3 no-wrap" id="activityPlaces">
                         <h4 class="m-2 text-center">Things to Do</h4>
                         <!-- container for place to append "things to do" cards in JS -->
@@ -143,8 +147,11 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
+            
             </div>
+            
             <div class="col-12 col-lg-7">
                 <div class="border rounded rounded-4 w-100 h-100">
                     <!-- map container element -->
