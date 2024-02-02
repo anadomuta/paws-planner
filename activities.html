@@ -13,9 +13,11 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Travel Atlas</title>
@@ -49,56 +51,83 @@
         <div class="row container my-2 mx-auto" style="min-height: 60vh;">
             <!-- Current Weather Conditions -->
             <div class="col-12 col-lg-4 weatherContainer p-2">
-                <h2 class="m-4 text-center"><i class="bi bi-cloud-sun me-2"></i> Current Weather</h2>
+                <h2 class="m-4 text-center" style="font-family: 'General Sans', sans-serif;"><i class="bi bi-cloud-sun me-2"></i> Current Weather</h2>
                 <div id="todayWeather"></div>
             </div>
             <div class="col-12 col-lg-8 p-2" id="whatsonnearby">
-                <h2 class="m-4 text-center"><i class="bi bi-ticket-detailed me-2"></i>What's on Nearby?</h2>
+                <h2 class="m-4 text-center" style="font-family: 'General Sans', sans-serif;"><i class="bi bi-ticket-detailed me-2"></i> What's on Nearby?</h2>
 
                 <form type="search-area2">
-                    <h5 class="text-center"><input class="mx-3 my-2 p-2 text-center border rounded rounded-3 text-body-secondary bg-dark bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h5>
+                    <h5 class="text-center"><input class="mx-3 my-2 p-2 text-center border rounded text-body-secondary bg-dark bg-opacity-75" type="text" id="search-area2" placeholder="Search again."></h5>
                 </form>
 
-                <div class="m-3 p-2 border rounded rounded-3 no-wrap" id="eatPlaces">
-                    <h4 class="m-2 mb-3 text-center">Places to Eat</h4>
+                <div class="m-3 border rounded no-wrap" id="eatPlaces">
+                    <h2 class="m-4 mb-3" style="font-family: 'General Sans';">Places to Eat</h2>
+                    <div class="m-4"><code>// Active Filters / Search Parameters added here with JS, e.g.:</code>
+                        <br><span class="badge-badge-secondary me-2">Italian</span>
+                        <span class="badge-badge-secondary me-2">Pet-Friendly</span>
+                        <span class="badge-badge-secondary me-2">Vegetarian</span>
+                    </div>
                     <!-- container for place to append "places to eat" cards in JS -->
-                    <div class="container d-flex flex-nowrap m-auto pb-2" id="eatCardContainer">
-                        <!-- example card -->
-                        <div class="card me-2 col-5 col-lg-3">
+                    <div class="container-fluid d-flex flex-nowrap p-0 mb-2" id="eatCardContainer">
+                        <!-- example cards delete once JS added -->
+                        <div class="card rounded-0 border-start-0 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                class="card-img-top img-fluid" alt="">
+                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">${eatName}</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">${eatLocation}
+                                <h5 class="card-title mb-4">${eatName}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
                                 </h6>
-                                <p>${eatDistance}</p>
-                                <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                <p class="monoText"><i class="bi bi-person-walking me-2"></i>${eatDistance}</p>
+                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
                             </div>
                         </div>
-                        <!-- example card -->
-                        <div class="card me-2 col-5 col-lg-3">
+                        <div class="card rounded-0 border-start-0 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                class="card-img-top img-fluid" alt="">
+                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">${eatName}</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">${eatLocation}
+                                <h5 class="card-title mb-4">${eatName}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
                                 </h6>
-                                <p>${eatDistance}</p>
-                                <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                <p class="monoText"><i class="bi bi-person-walking me-2"></i>${eatDistance}</p>
+                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
                             </div>
                         </div>
-                        <!-- example card -->
-                        <div class="card me-2 col-5 col-lg-3">
+                        <div class="card rounded-0 border-start-0 col-5 col-lg-3">
                             <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                class="card-img-top img-fluid" alt="">
+                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
                             <div class="card-body">
-                                <h5 class="card-title">${eatName}</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">${eatLocation}
+                                <h5 class="card-title mb-4">${eatName}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
                                 </h6>
-                                <p>${eatDistance}</p>
-                                <a href="#" class="btn btn-sm btn-primary">${Link}</a>
+                                <p class="monoText"><i class="bi bi-person-walking me-2"></i>${eatDistance}</p>
+                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
                             </div>
                         </div>
+                        <div class="card rounded-0 border-start-0 col-5 col-lg-3">
+                            <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
+                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">${eatName}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
+                                </h6>
+                                <p class="monoText"><i class="bi bi-person-walking me-2"></i>${eatDistance}</p>
+                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
+                            </div>
+                        </div>
+                        <div class="card rounded-0 border-start-0 col-5 col-lg-3">
+                            <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
+                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">${eatName}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
+                                </h6>
+                                <p class="monoText"><i class="bi bi-person-walking me-2"></i>${eatDistance}</p>
+                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
+                            </div>
+                        </div>
+                        <!-- example cards delete once JS added -->
+
                     </div>
                 </div>
 

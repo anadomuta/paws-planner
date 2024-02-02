@@ -93,8 +93,16 @@ nav:hover{
 
 
 #eatCardContainer, #activityCardContainer{
-    overflow-x: auto;
-    
+    overflow-x: auto;   
+}
+
+.monoText{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.card-title, .card-subtitle{
+    font-family: 'Cabinet Grotesk', sans-serif;
 }
 
 /* map */
