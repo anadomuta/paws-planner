@@ -20,7 +20,6 @@ $(document).ready(function () {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
         // Display current weather conditions for selected city
         weatherContainer.removeClass("d-none");
         currentWeather.empty();
