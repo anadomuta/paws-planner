@@ -3,26 +3,33 @@ font-family: 'Inter', sans-serif;
 font-family: 'Noto Sans', sans-serif;
 
 /* Universal Settings */
-:root{
+:root {
     scroll-behavior: smooth;
     --body-font: 'Noto Sans', sans-serif;
     --header-font: 'Cabinet Grotesk', 'Noto Sans', sans-serif;
 }
 
-*{
+* {
     font-family: var(--body-font);
     transition: ease 0.5s;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--header-font);
 }
 
 /* Navbar  */
-.nav-link{
+.nav-link {
     color: var(--bs-body-color);
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: white;
 }
 
@@ -46,29 +53,34 @@ h1, h2, h3, h4{
 } */
 
 /* Second page */
-#secondPage{
+#secondPage {
     min-height: 100vh;
     font-weight: 300;
 }
 
-#locationInfo, #map{
+#locationInfo,
+#map {
     overflow-y: auto;
     font-size: 0.85rem;
 }
 
-#locationInfo h3{
+#locationInfo h3 {
     font-family: var(--header-font);
 }
 
-#eatCardContainer, #activityCardContainer{
-    overflow-x: auto;   
+#todayWeather {
+    text-align: center;
 }
 
-.monoText{
+#eatCardContainer,
+#activityCardContainer {
+    overflow-x: auto;
+}
+
+.monoText {
     font-family: monospace;
     font-size: 0.8rem;
 }
-
 
 /* Animations / Transitions */
 .cityBackground .btn {
@@ -82,14 +94,20 @@ h1, h2, h3, h4{
     transition: 0.5s ease-in-out;
 }
 
-#navLogo{transition: 0.5s ease;}
-#navLogo:hover{
-    scale:1.2;
+#navLogo {
+    transition: 0.5s ease;
+}
+
+#navLogo:hover {
+    scale: 1.2;
     rotate: 20deg;
     transition: 0.5s ease;
 }
 
-nav ul{background-color: rgba(var(--bs-light-rgb),0.5);}
-nav ul:hover{
-    background-color: rgba(var(--bs-light-rgb),1);
+nav ul {
+    background-color: rgba(var(--bs-light-rgb), 0.5);
+}
+
+nav ul:hover {
+    background-color: rgba(var(--bs-light-rgb), 1);
 }
