@@ -1,12 +1,18 @@
-/* Fonts
-font-family: 'Inter', sans-serif;
-font-family: 'Noto Sans', sans-serif;
-
 /* Universal Settings */
 :root {
     scroll-behavior: smooth;
+    /* fonts */
     --body-font: 'Noto Sans', sans-serif;
     --header-font: 'Cabinet Grotesk', 'Noto Sans', sans-serif;
+    /* colours */
+    --colPrimary: #8c98c8;
+    --colPrimaryDark: #525871;
+    --colSecondary: #ccd4eb;
+    --colSecondaryDark: #7381ad;
+    --colHighlight: #ffe7c1;
+    --colAccent: #39a7a4;
+    --colContrast: #e16857;
+
 }
 
 * {
@@ -35,13 +41,16 @@ h4 {
 
 /* Jumbotron  */
 .cityBackground {
-    background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
+    background-image: url(../images/travelling-guy-and-girl-with-a-cat-and-pet-carrier-vector.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
 .pageTitle{
-    font-size: 7rem; 
+    font-family: 'Pally', sans-serif;
+    font-size: calc(30px + 2vw);
+    color: var(--colPrimaryDark);
 }
 
 /* .search-area {
@@ -84,21 +93,21 @@ h4 {
 
 /* Animations / Transitions */
 .cityBackground .btn {
-    background-color: #003d42;
+    background-color: var(--colContrast);
     transition: 0.5s ease-in-out;
 }
 
 .cityBackground .btn:hover {
-    background-color: #00988c;
+    background-color: var(--colHighlight);
     scale: 1.2;
     transition: 0.5s ease-in-out;
 }
 
-#navLogo {
+#navLogo, #coverLogo {
     transition: 0.5s ease;
 }
 
-#navLogo:hover {
+#navLogo:hover, #coverLogo:hover {
     scale: 1.2;
     rotate: 20deg;
     transition: 0.5s ease;
