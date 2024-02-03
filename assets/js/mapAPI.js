@@ -1,4 +1,4 @@
-//Added basic fetch for data from Mapping API
+// Added basic fetch for data from Mapping API
 document.addEventListener("DOMContentLoaded", function () {
   const apiUrl = "https://geocode.search.hereapi.com/v1/geocode";
   const apiKey = "RQsjWkadZwLvAyUu3XQzmATwlTXAmVQFvpHX1xAHFXU";
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       pixelRatio: window.devicePixelRatio || 1,
     }
   );
+
   window.addEventListener("resize", () => map.getViewPort().resize());
 
   document
@@ -49,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       const location = document.getElementById("locationInput").value;
       fetchData(location);
-      $("html, body").animate(
-        { scrollTop: $("#navigationBar").offset().top },
-        200
-      );
+      window.location.href = "#navigationBar";
+      $(".customNav").removeClass("d-none");
+      $(".weatherContainer").removeClass("d-none");
+      $(".activitiesContainer").removeClass("d-none");
     });
 });
