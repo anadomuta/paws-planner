@@ -23,6 +23,7 @@ $(document).ready(function () {
         console.log(data);
         // Display current weather conditions for selected city
         weatherContainer.removeClass("d-none");
+        currentWeather.empty();
         // Weather Icon
         var weatherTodayIcon = data.weather[0].icon;
         var todayIcon = `<img src="https://openweathermap.org/img/wn/${weatherTodayIcon}@2x.png"/>`;
