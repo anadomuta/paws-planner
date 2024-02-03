@@ -5,7 +5,7 @@ font-family: 'Noto Sans', sans-serif;
 /* Universal Settings */
 :root{
     scroll-behavior: smooth;
-    --body-font: 'Noto Sans', serif;
+    --body-font: 'Noto Sans', sans-serif;
     --header-font: 'Cabinet Grotesk', 'Noto Sans', sans-serif;
 }
 
@@ -22,49 +22,30 @@ h1, h2, h3, h4{
 .nav-link{
     color: var(--bs-body-color);
 }
-
-nav:hover{
-    background-color: rgba(131, 194, 175, 0.15);
+.nav-link:hover{
+    color: white;
 }
 
 /* Jumbotron  */
 .cityBackground {
-    height: calc(100vh - 25px);
     background-image: url(../images/background-image-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.customJumbo {
-    height: 80%;
-    padding: 10px;
-    text-align: center;
-}
-
-#logo {
-    height: 80%;
-    align-items: center;
+#pageTitle{
+    font-size: 7rem; 
+    font-family: 'Protest Riot'; 
+    color: #013e41;
+    /* text-shadow: whitesmoke 0px 5px; */
 }
 
 .search-area {
-    background-color: #EDEDE3;
+    background-color: rgba(237, 237, 227, 0.7);
     width: 80%;
     max-width: 680px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 25px;
-}
-
-.cityBackground .btn {
-    background-color: #83C2AF;
-    border: none;
-}
-
-#searchButton {
-    margin-top: 25px;
 }
 
 /* Second page */
@@ -74,7 +55,6 @@ nav:hover{
 }
 
 #locationInfo, #map{
-    /* max-height: 100vh; */
     overflow-y: auto;
     font-size: 0.85rem;
 }
@@ -90,4 +70,29 @@ nav:hover{
 .monoText{
     font-family: monospace;
     font-size: 0.8rem;
+}
+
+
+/* Animations / Transitions */
+.cityBackground .btn {
+    background-color: #003d42;
+    transition: 0.5s ease-in-out;
+}
+
+.cityBackground .btn:hover {
+    background-color: #00988c;
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+}
+
+#navLogo{transition: 0.5s ease;}
+#navLogo:hover{
+    scale:1.2;
+    rotate: 20deg;
+    transition: 0.5s ease;
+}
+
+nav ul{background-color: rgba(var(--bs-light-rgb),0.5);}
+nav ul:hover{
+    background-color: rgba(var(--bs-light-rgb),1);
 }
