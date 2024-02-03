@@ -25,20 +25,6 @@
 
 <body>
 
-      <!-- Jumbotron -->
-      <div class="p-5 mb-4 bg-body-tertiary cityBackground d-flex align-items-center justify-content-center" id="home">
-            <div class="container p-5 text-center" style="height: 100vh;">
-                  <img class="mt-5" src="./assets/images/logo.PNG" alt="Paws Planner Logo" id="logo" style="max-height: 35%;">
-                  <h1 class="mt-2 mb-5" id="pageTitle">Paws Planner</h1>
-                  <div class="search-area rounded mb-5 px-5">
-                        <h1 class="col-md-12 mb-3">Where would you like to go?</h1>
-                        <h2><input id="locationInput" class="form-control mt-1 text-center" type="text" placeholder="City, Town, Postcode..." style="font-family: 'Cabinet Grotesk', sans-serif;"></h2>
-                        <h1><button id="searchButton" class="btn btn mt-3 px-5 py-2 rounded text-light" type="button">Search</button></h1>
-                  </div>
-            </div>
-      </div>
-      <!-- End jumbotron -->
-
       <!-- Navbar -->
       <nav class="user-select-none p-3 rounded-3 sticky-top">
             <ul class="nav py-2 px-3 rounded-3 border navbar-expand-lg d-flex justify-content-start align-items-center sticky-top">
@@ -53,6 +39,23 @@
             </ul>
       </nav>
       <!-- Navbar -->
+
+      <!-- Jumbotron -->
+
+      <div class="vh-100 rounded cityBackground container-fluid p-0">
+            <div class="col-5 rounded-start-0 h-100 bg-light bg-opacity-50 d-flex flex-column justify-content-evenly align-items-center" style="border-radius: 15%;">
+                  <img height="100px" width="100px" src="./assets/images/logo.PNG" alt="Paws Planner Logo" id="logo">
+                  <h1 class="my-2 mb-5 pageTitle">Plan your Paws.</h1>
+                  <div class="search-area rounded mb-5 px-5 text-center">
+                        <h1 class="col-md-12 mb-3">Where would you like to go?</h1>
+                        <h2><input id="locationInput" class="form-control mt-1 text-center" type="text" placeholder="City, Town, Postcode..." style="font-family: 'Cabinet Grotesk', sans-serif;"></h2>
+                        <h1><button id="searchButton" class="btn btn mt-3 px-5 py-2 rounded text-light" type="button">Search</button></h1>
+                  </div>
+            </div>
+      </div>
+      <!-- End jumbotron -->
+
+
 
       <!-- Second page -->
       <div class="container-fluid user-select-none" id="secondPage" style="min-height: 110vh;">

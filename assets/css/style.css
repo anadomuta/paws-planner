@@ -33,20 +33,17 @@ h1, h2, h3, h4{
     background-repeat: no-repeat;
 }
 
-#pageTitle{
+.pageTitle{
     font-size: 7rem; 
-    font-family: 'Protest Riot'; 
-    color: #013e41;
-    /* text-shadow: whitesmoke 0px 5px; */
 }
 
-.search-area {
+/* .search-area {
     background-color: rgba(237, 237, 227, 0.7);
     width: 80%;
     max-width: 680px;
     margin: 0 auto;
     padding: 20px;
-}
+} */
 
 /* Second page */
 #secondPage{
