@@ -56,15 +56,15 @@ h4 {
 .bgcard:hover{
     cursor: pointer;
     z-index: 5;
-    transition: 1s ease;
-    rotate: 90deg;
 }
-
 
 #bgcard1{
     top: 20%;
     left: -2%;
     rotate: 40deg;
+}
+#bgcard1:hover{
+    transform: translateX(20%) scale(1.5) rotate(20deg);
 }
 
 #bgcard2{
@@ -72,11 +72,17 @@ h4 {
     left: 25%;
     rotate: 156deg;
 }
+#bgcard2:hover{
+    transform: translateY(-70%) scale(1.5) rotate(30deg);
+}
 
 #bgcard3{
     bottom: -7.5%;
     right: 20%;
     rotate: 12deg;
+}
+#bgcard3:hover{
+    transform: translateY(-40%) scale(1.5) rotate(-32deg);
 }
 
 #bgcard4{
@@ -84,13 +90,18 @@ h4 {
     right:-5.8%;
     rotate: -76deg;
 }
+#bgcard4:hover{
+    transform: translateY(-40%) scale(1.5) rotate(-20deg);
+}
 
 #bgcard5{
     bottom: -4%;
-    left: 7.5%;
+    left: 17.5%;
     rotate: -20deg;
 }
-
+#bgcard5:hover{
+    transform: translateY(-20%) translateX(30%) scale(1.5) rotate(40deg);
+}
 
 /* Jumbotron  */
 #home {
@@ -129,7 +140,6 @@ h4 {
 
 /* Second page */
 #secondPage {
-    min-height: 100vh;
     font-weight: 300;
 }
 
