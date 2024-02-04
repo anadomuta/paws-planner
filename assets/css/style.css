@@ -7,12 +7,13 @@
     /* colours */
     --colPrimary: #8c98c8;
     --colPrimaryDark: #525871;
-    --colSecondary: #ccd4eb;
-    --colSecondaryDark: #7381ad;
+    --colSecondary: #566a79;
+    --colSecondaryDark: #566a79;
     --colHighlight: #ffe7c1;
     --colAccent: #39a7a4;
-    --colContrast: #e16857;
-
+    --colContrast: #fb3333;
+    --colBgDark: #2c2a2b;
+    --colBgLight: #e4ded8;
 }
 
 * {
@@ -40,8 +41,8 @@ h4 {
 }
 
 /* Jumbotron  */
-.cityBackground {
-    background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
+.jumboBackground {
+    background-image: url(../images/dddepth-230.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,13 +54,12 @@ h4 {
     color: var(--colPrimaryDark);
 }
 
-/* .search-area {
-    background-color: rgba(237, 237, 227, 0.7);
-    width: 80%;
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 20px;
-} */
+#homecontainer{
+    background-color: var(--colBgLight);
+    background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
+    background-size: cover;
+    background-position: center;
+}
 
 /* Second page */
 #secondPage {
