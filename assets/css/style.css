@@ -47,10 +47,19 @@ h4 {
     background-image: url(../images/nnnoise.svg);
     background-position: center;
     background-size: cover;
-    z-index: -1;
+    z-index: 1;
     transform-origin: center;
     overflow: hidden;
+    transition: 1s ease;
 }
+
+.bgcard:hover{
+    cursor: pointer;
+    z-index: 5;
+    transition: 1s ease;
+    rotate: 90deg;
+}
+
 
 #bgcard1{
     top: 20%;
@@ -85,9 +94,10 @@ h4 {
 
 /* Jumbotron  */
 #home {
-    overflow-x: hidden;
+    overflow: hidden;
     min-height: 100vh;
-    background-image: url(../images/);
+    width: 100vw;
+    background-image: url(../images/jonathan-roger-LY1eyQMFeyo-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,9 +110,14 @@ h4 {
 }
 
 #homecontainer{
+    z-index: 2;
     min-height: 75vh;
     width: 75%;
     rotate: -2.5deg;
+    background-color: var(--colbgcard);
+    background-image: url(../images/nnnoise.svg);
+    background-position: center;
+    background-size: cover;;
 }
 
 #dogImage{
