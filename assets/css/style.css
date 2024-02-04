@@ -64,11 +64,11 @@ h4 {
     rotate: 40deg;
 }
 #bgcard1:hover{
-    transform: translateX(20%) scale(1.5) rotate(20deg);
+    transform: translateX(40%) scale(1.5) rotate(20deg);
 }
 
 #bgcard2{
-    top: -20%;
+    top: -10%;
     left: 25%;
     rotate: 156deg;
 }
@@ -82,7 +82,7 @@ h4 {
     rotate: 12deg;
 }
 #bgcard3:hover{
-    transform: translateY(-40%) scale(1.5) rotate(-32deg);
+    transform: translateY(-50%) scale(1.5) rotate(-32deg);
 }
 
 #bgcard4{
@@ -91,7 +91,7 @@ h4 {
     rotate: -76deg;
 }
 #bgcard4:hover{
-    transform: translateY(-40%) scale(1.5) rotate(-20deg);
+    transform: translateY(-60%) scale(1.5) rotate(-20deg);
 }
 
 #bgcard5{
@@ -100,7 +100,7 @@ h4 {
     rotate: -20deg;
 }
 #bgcard5:hover{
-    transform: translateY(-20%) translateX(30%) scale(1.5) rotate(40deg);
+    transform: translateY(-40%) translateX(30%) scale(1.5) rotate(40deg);
 }
 
 /* Jumbotron  */
