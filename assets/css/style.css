@@ -14,6 +14,7 @@
     --colContrast: #fb3333;
     --colBgDark: #2c2a2b;
     --colBgLight: #e4ded8;
+    --colbgcard: #e5e6e3;
 }
 
 * {
@@ -40,9 +41,53 @@ h4 {
     color: white;
 }
 
+/* coverpage background cards */
+.bgcard{
+    background-color: var(--colbgcard);
+    background-image: url(../images/nnnoise.svg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    transform-origin: center;
+    overflow: hidden;
+}
+
+#bgcard1{
+    top: 20%;
+    left: -2%;
+    rotate: 40deg;
+}
+
+#bgcard2{
+    top: -20%;
+    left: 25%;
+    rotate: 156deg;
+}
+
+#bgcard3{
+    bottom: -7.5%;
+    right: 20%;
+    rotate: 12deg;
+}
+
+#bgcard4{
+    top: 10%;
+    right:-5.8%;
+    rotate: -76deg;
+}
+
+#bgcard5{
+    bottom: -4%;
+    left: 7.5%;
+    rotate: -20deg;
+}
+
+
 /* Jumbotron  */
-.jumboBackground {
-    background-image: url(../images/dddepth-230.jpg);
+#home {
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-image: url(../images/);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,10 +100,16 @@ h4 {
 }
 
 #homecontainer{
-    background-color: var(--colBgLight);
+    min-height: 75vh;
+    width: 75%;
+    rotate: -2.5deg;
+}
+
+#dogImage{
     background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 /* Second page */
@@ -92,12 +143,13 @@ h4 {
 }
 
 /* Animations / Transitions */
-.cityBackground .btn {
+#searchButton {
     background-color: var(--colContrast);
     transition: 0.5s ease-in-out;
 }
 
-.cityBackground .btn:hover {
+#searchButton:hover {
+    transform-origin: left;
     scale: 1.2;
     transition: 0.5s ease-in-out;
 }
