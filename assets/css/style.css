@@ -138,6 +138,16 @@ h4 {
     background-position: bottom;
 }
 
+.btn-socialTag{
+    background-color: var(--colSecondary);
+    transition: 0.5s ease;
+}
+
+.btn-socialTag:hover{
+    background-color: var(--colPrimary);
+    transform: rotate(10deg);
+}
+
 /* Second page */
 #secondPage {
     font-weight: 300;
