@@ -15,44 +15,63 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-      <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+      <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1&f[]=pally@1&display=swap" rel="stylesheet">
       <!-- Icons -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
       <!-- Custom CSS -->
       <link rel="stylesheet" href="./assets/css/style.css" />
-      <title>Paw Planner</title>
+      <title>Paws Planner</title>
 </head>
 
 <body>
-
       <!-- Jumbotron -->
-      <div class="p-5 mb-4 bg-body-tertiary cityBackground d-flex align-items-center justify-content-center" id="home">
-            <div class="container p-5 text-center" style="height: 100vh;">
-                  <img class="mt-5" src="./assets/images/logo.PNG" alt="Paw Planner Logo" id="logo"
-                        style="max-height: 35%;">
-                  <h1 class="mt-2 mb-5" id="pageTitle">Paw Planner</h1>
-                  <div class="search-area rounded mb-5 px-5">
-                        <h1 class="col-md-12 mb-3">Where would you like to go?</h1>
-                        <h2><input id="locationInput" class="form-control mt-1 text-center" type="text"
-                                    placeholder="City, Town, Postcode..."
-                                    style="font-family: 'Cabinet Grotesk', sans-serif;"></h2>
-                        <h1><button id="searchButton" class="btn btn mt-3 px-5 py-2 rounded text-light"
-                                    type="button">Search</button></h1>
-                  </div>
+      <div class="container-fluid user-select-none d-flex justify-content-center align-items-center" id="home">
+            <!-- background cards -->
+            <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard" style="width: 23rem;" id="bgcard1">
+                  <img src="./assets/images/card1.png" class="card-img-top rounded-0 my-5 px-3" alt="...">
+            </div>
+            <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard" style="width: 15rem;" id="bgcard2">
+                  <img src="./assets/images/card2.png" class="card-img-top rounded-0 my-5 px-3" alt="...">
+            </div>
+            <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard" style="width: 20rem;" id="bgcard3">
+                  <img src="./assets/images/card3.png" class="card-img-top rounded-0 my-5 px-3" alt="...">
+            </div>
+            <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard" style="width: 30rem;" id="bgcard4">
+                  <img src="./assets/images/card4.png" class="card-img-top rounded-0 my-5 px-3" alt="...">
+            </div>
+            <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard" style="width: 18rem;" id="bgcard5">
+                  <img src="./assets/images/card5.png" class="card-img-top rounded-0 my-5 px-3" alt="...">
+            </div>
+            <!-- primary card -->
+            <div class="rounded-5 row container-fluid m-5 border border-secondary" id="homecontainer">
+                        <div class="col-12 col-lg-5 d-flex flex-column justify-content-center p-5" id="searchArea">
+                              <div class="d-flex align-items-center justify-content-start p-0 mb-5">
+                                    <img class="me-4" height="50px" width="50px" src="./assets/images/logo.PNG" alt="Paws Planner Logo" id="coverLogo">
+                                    <h1 class="pageTitle m-0 text-center">Paws Planner</h1>
+                              </div>
+                              <h3 class="mb-2">Tired of your daily routine? Don't want to leave the four-legged friends at home? Then plan your break now...</h3>
+                              <h3 class="mb-5">Pawsitively perfect journeys await!</h3>
+                              <h2 class="mb-3" style="color: var(--colSecondaryDark)">Where would you like to explore?</h2>
+                              <h2 class="my-3 d-flex align-items-center"><input id="locationInput" class="form-control mt-1 border-0" type="text" placeholder="City, Town, Postcode..." style="font-family: 'Cabinet Grotesk', sans-serif;"></h2>
+                              <h1><button id="searchButton" class="btn btn px-5 py-2 me-5 rounded text-light position-relative" type="button"><i class="bi bi-search-heart me-2"></i>Search</button></h1> 
+                              <div class="mt-5 d-flex justify-content-evenly align-items-center" id="socialTags">
+                                    <a target="_blank" href="https://www.facebook.com/" class="btn btn-socialTag px-1 py-1"><i class="bi bi-facebook mx-1 text-light"></i></a>
+                                    <a target="_blank" href="https://www.instagram.com/" class="btn btn-socialTag px-1 py-1"><i class="bi bi-instagram mx-1 text-light"></i></a>
+                                    <a target="_blank" href="https://twitter.com/" class="btn btn-socialTag px-1 py-1"><i class="bi bi-twitter mx-1 text-light"></i></a>
+                              </div>
+                        </div>
+                        <div class="d-none d-lg-block col-lg-7 p-5" id="dogImage"></div>
             </div>
       </div>
-      <!-- End jumbotron -->
-
+      
       <!-- Second page -->
 
       <!-- Navbar -->
-      <nav class="user-select-none p- rounded-3 sticky-to d-none customNav" id="navigationBar">
-            <ul
-                  class="nav py-2 px-3 rounded-3 border navbar-expand-lg d-flex justify-content-start align-items-center sticky-top">
+      <nav class="user-select-none p-3 rounded-3 sticky-top d-none customNav" id="navigationBar">
+            <ul class="nav py-2 px-3 rounded-3 border navbar-expand-lg d-flex justify-content-start align-items-center sticky-top">
                   <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4"
                         style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;" id="navLogo">
-                  <h5 class="ms-2 me-5 my-0" style="font-family: 'Cabinet Grotesk', sans-serif; ">Paw Planner</h5>
+                  <h5 class="ms-2 me-5 my-0" style="font-family: 'Pally', sans-serif; ">Paws Planner</h5>
                   <li class="nav-item mx-3">
                         <a class="btn btn-secondary btn-sm nav-link py-1 px-3" href="#home"
                               title="Visit the home page."><i class="bi bi-house-heart-fill m-0 me-md-2"></i><span
@@ -66,13 +85,12 @@
                   </li>
             </ul>
       </nav>
-      <!-- End Navbar -->
+      <!-- Navbar -->
 
-
-      <div class="container-fluid user-select-none" id="secondPage" style="min-height: 110vh;">
+      <div class="container-fluid user-select-none mt-5" id="secondPage">
             <!-- Map Container -->
-            <div class="row rounded rounded-3 m-2 p-0" style="height: 60vh;">
-                  <div class="col-12 mh-100 p-0 position-relative">
+            <div class="row rounded rounded-3 m-2 p-0" style="height: 50vh;">
+                  <div class="col-10 mx-auto mh-100 p-0 position-relative">
                         <!-- Map Element -->
                         <div id="mapContainer" class="col-12 w-auto h-100 position-relative top-0 start-0">
                               <div id="map" class="rounded w-auto h-100"></div>
@@ -87,7 +105,7 @@
                   </div>
             </div>
             <!-- Information Container on Searched Location -->
-            <div class="row container my-2 mx-auto" style="min-height: 60vh;">
+            <div class="row container my-2 mx-auto">
                   <!-- Current Weather Conditions -->
                   <div class="col-12 col-lg-5 weatherContainer d-none p-2">
                         <h1 class="m-4 text-center"><i class="bi bi-cloud-sun me-2"></i>Current Weather</h1>
@@ -258,29 +276,28 @@
                         </div>
                   </div>
             </div>
+      </div>
 
-
-            <!-- Dayjs -->
-            <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-            <!-- Bootstrap JS link -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                  crossorigin="anonymous"></script>
-            <!-- HereAPI scripts -->
-            <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
-            <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
-            <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
-            <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
-            <!-- jQuery scripts -->
-            <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-                  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-            <!-- Custom JS scripts -->
-            <script defer src="./assets/js/mapAPI.js"></script>
-            <script src="./assets/js/weatherAPI.js"></script>
-            <script src="./assets/js/eventsAPI.js"></script>
-            <!-- Library for Passive Event Listeners -->
-            <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
+      <!-- Dayjs -->
+      <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+      <!-- Bootstrap JS link -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+      <!-- HereAPI scripts -->
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+      <!-- jQuery scripts -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <!-- Custom JS scripts -->
+      <script defer src="./assets/js/mapAPI.js"></script>
+      <script src="./assets/js/weatherAPI.js"></script>
+      <script src="./assets/js/eventsAPI.js"></script>
+      <!-- Library for Passive Event Listeners -->
+      <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 </body>
-<footer></footer>
 
 </html>
