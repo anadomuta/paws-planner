@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
   // Check if the modal should be shown
   var shouldShowModal = localStorage.getItem('showModal');
-
   if (shouldShowModal !== 'false') {
+  
     // Show the modal
     var welcomeModal = new bootstrap.Modal(document.getElementById('PawsPlannerModal'), { backdrop: 'static' });
     welcomeModal.show();
