@@ -107,12 +107,12 @@
             <!-- Information Container on Searched Location -->
             <div class="row container my-2 mx-auto">
                   <!-- Current Weather Conditions -->
-                  <div class="col-12 col-lg-5 weatherContainer d-none p-2">
+                  <div class="col-12 col-lg-5 weatherContainer p-2">
                         <h1 class="m-4 text-center"><i class="bi bi-cloud-sun me-2"></i>Current Weather</h1>
                         <div class="border rounded p-3" id="todayWeather"></div>
                   </div>
                   <!-- What's on Nearby Container -->
-                  <div class="col-12 col-lg-7 p-2 d-none activitiesContainer" id="whatsonnearby">
+                  <div class="col-12 col-lg-7 p-2 activitiesContainer" id="whatsonnearby">
                         <h1 class="m-4 text-center"><i class="bi bi-ticket-detailed me-2"></i> What's on Nearby?</h1>
                         <div class="m-3 border rounded no-wrap" id="eatPlaces">
                               <h2 class="m-4 mb-3">Places to Eat</h2>
@@ -123,162 +123,15 @@
                                     <span class="badge-badge-secondary me-2">Vegetarian</span>
                               </div>
                               <!-- container for place to append "places to eat" cards in JS -->
-                              <code>// Cards for places to eat addded here with JS, e.g.:</code>
                               <div class="container-fluid d-flex flex-nowrap p-0 mb-2" id="eatCardContainer">
-                                    <!-- example cards delete once JS added -->
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${eatName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
-                                                </h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${eatDistance}</p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${eatName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
-                                                </h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${eatDistance}</p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${eatName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
-                                                </h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${eatDistance}</p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${eatName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
-                                                </h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${eatDistance}</p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER restaurant1Image.png"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${eatName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${eatLocation}
-                                                </h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${eatDistance}</p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <!-- example cards delete once JS added -->
-                              </div>
-                        </div>
-                        <div class="m-3 border rounded no-wrap" id="activityPlaces">
-                              <h2 class="m-4 mb-3">Things to Do</h2>
-                              <div class="m-4">
-                                    <code>// Active Filters / Search Parameters added here with JS, e.g.:</code>
-                                    <br><span class="badge-badge-secondary me-2">Wheelchair-accessible</span>
-                                    <span class="badge-badge-secondary me-2">Sports</span>
-                                    <span class="badge-badge-secondary me-2">Arts & Culture</span>
-                              </div>
-                              <!-- container for place to append "places to eat" cards in JS -->
-                              <code>// Cards for places to eat addded here with JS, e.g.:</code>
-                              <div class="container-fluid d-flex flex-nowrap p-0 mb-2" id="activityCardContainer">
-                                    <!-- example cards delete once JS added -->
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER activityImage.jpg"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${activityName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${activityLocation}</h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${activityDistance}
-                                                </p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER activityImage.jpg"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${activityName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${activityLocation}</h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${activityDistance}
-                                                </p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER activityImage.jpg"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${activityName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${activityLocation}</h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${activityDistance}
-                                                </p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER activityImage.jpg"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${activityName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${activityLocation}</h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${activityDistance}
-                                                </p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <div class="card rounded-0 border-start-0 col-5 col-lg-3">
-                                          <img src="./assets/images/PLACEHOLDER activityImage.jpg"
-                                                class="card-img-top img-fluid rounded-0 border-bottom" alt="">
-                                          <div class="card-body">
-                                                <h5 class="card-title mb-4">${activityName}</h5>
-                                                <h6 class="card-subtitle mb-2 text-body-secondary"><i
-                                                            class="bi bi-geo-alt-fill me-2"></i>${activityLocation}</h6>
-                                                <p class="monoText"><i
-                                                            class="bi bi-person-walking me-2"></i>${activityDistance}
-                                                </p>
-                                                <a href="#" class="btn btn-sm btn-primary mt-2 py-1">${Link}</a>
-                                          </div>
-                                    </div>
-                                    <!-- example cards delete once JS added -->
                               </div>
                         </div>
                   </div>
             </div>
             <button type="button" class="btn btn-primary" onclick="getPlaces()">run geoapify api</button>
-
       </div>
+
+
 
       <!-- Dayjs -->
       <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
