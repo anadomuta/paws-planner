@@ -56,3 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
       $(".activitiesContainer").removeClass("d-none");
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var welcomeModal = new bootstrap.Modal(document.getElementById('PawsPlannerModal'));
+  welcomeModal.show();
+});
