@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var shouldShowModal = localStorage.getItem('showModal');
   if (shouldShowModal !== 'false') {
   
-    // Show the modal
+    // Show modal
     var welcomeModal = new bootstrap.Modal(document.getElementById('PawsPlannerModal'), { backdrop: 'static' });
     welcomeModal.show();
   }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set a flag in localStorage to indicate that the modal has been seen
     localStorage.setItem('showModal', 'false');
 
-    // Hide the modal
+    // Hide modal
     var welcomeModal = new bootstrap.Modal(document.getElementById('PawsPlannerModal'));
     welcomeModal.hide();
   });
