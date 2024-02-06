@@ -1,12 +1,20 @@
 function getPlaces(){
   $("#loadingStatus").removeClass("d-none")
-  var categories = "catering" // an array? of categories user wants to search for as per: https://apidocs.geoapify.com/docs/places/#categories
-  var conditions = "dogs" // an array? of additional conditions user wants to search for as per: https://apidocs.geoapify.com/docs/places/#conditions
+  var categories = ["catering"] // an array? of categories user wants to search for as per: https://apidocs.geoapify.com/docs/places/#categories
+  var conditions = ["dogs", "wheelchair"] // an array? of additional conditions user wants to search for as per: https://apidocs.geoapify.com/docs/places/#conditions
   var lon = "-0.1252584240406704" //longitude
   var lat = "51.510634994721855" //latitude
   var radius = "10000" //search radius in metres, e.g. 5000
 
-  fetch(`https://api.geoapify.com/v2/places?categories=${categories}&conditions=${conditions}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`)
+  categories.forEach(element => {
+    $("#activeCategories").append(`<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`)
+  });
+  conditions.forEach(element => {
+    $("#activeCategories").append(`<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`)
+  })
+
+
+  fetch(`https://api.geoapify.com/v2/places?categories=${categories.join(',')}&conditions=${conditions.join(',')}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`)
     .then(response => response.json())
     .then(function loadCards(result){
       console.log(`https://api.geoapify.com/v2/places?categories=${categories}&conditions=${conditions}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`)
