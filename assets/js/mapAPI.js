@@ -58,6 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  var welcomeModal = new bootstrap.Modal(document.getElementById('PawsPlannerModal'));
-  welcomeModal.show();
+  // Check if the modal should be shown
+  var shouldShowModal = localStorage.getItem('showModal');
+
+  if (shouldShowModal !== 'false') {
+    // Show the modal
+    var welcomeModal = new bootstrap.Modal(document.getElementById('PawsPlannerModal'), { backdrop: 'static' });
+    welcomeModal.show();
+  }
+    // Add click event listener to the "Let's get started" button
+  document.getElementById('letsGetStartedBtn').addEventListener('click', function () {
+  
+    // Set a flag in localStorage to indicate that the modal has been seen
+    localStorage.setItem('showModal', 'false');
+
+    // Hide the modal
+    var welcomeModal = new bootstrap.Modal(document.getElementById('PawsPlannerModal'));
+    welcomeModal.hide();
+  });
 });
