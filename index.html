@@ -8,8 +8,13 @@
       <!-- Favicon -->
       <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
       <!-- Bootstrap CDN -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+            crossorigin="anonymous">
+      <!-- jQuery UI -->
+      <link rel="stylesheet" 
+            href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
       <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,10 +122,10 @@
                               <div id="map" class="rounded w-auto h-100"></div>
                         </div>
                         <!-- Search Button -->
-                        <form type="search-area2" class="mx-5 position-absolute bottom-0 start-50 translate-middle">
+                        <form type="searcharea2" class="mx-5 position-absolute bottom-0 start-50 translate-middle">
                               <h1 class="text-center"><input
                                           class="px-5 py-2 text-center border rounded-3 text-body-light bg-light bg-opacity-75"
-                                          type="text" id="search-area2" placeholder="Search in the area..."
+                                          type="text" id="searcharea2" placeholder="Search in the area..."
                                           style="font-family: 'Cabinet Grotesk', var(--body-font), sans-serif;"></h1>
                         </form>
                   </div>
@@ -136,7 +141,7 @@
                   <div class="col-12 col-lg-7 p-2 activitiesContainer" id="whatsonnearby">
                         <h1 class="m-4 text-center"><i class="bi bi-ticket-detailed me-2"></i> What's on Nearby?</h1>
                         <div class="m-3 border rounded no-wrap" id="eatPlaces">
-                              <h2 class="m-4 mb-3">Places to Eat</h2>
+                              <h2 class="m-4 mb-2">Places to Eat</h2>
                               <div class="m-4" id="activeCategories">
                               </div>
                               <div class="d-none d-flex justify-content-center align-items-center" id="loadingStatus">
@@ -169,7 +174,12 @@
       <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
       <!-- jQuery scripts -->
       <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+            crossorigin="anonymous"></script>
+      <!-- jQuery UI scripts -->
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" 
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" 
+            crossorigin="anonymous"></script>
       <!-- Custom JS scripts -->
       <script defer src="./assets/js/mapAPI.js"></script>
       <script src="./assets/js/weatherAPI.js"></script>

@@ -32,6 +32,21 @@ h4 {
     font-family: var(--header-font);
 }
 
+/* jquery ui */
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+}
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
 /* Navbar  */
 .nav-link {
     color: var(--bs-body-color);
