@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
           $("#eatCardContainer").append(`
           <div class="card rounded mx-1 col-5 col-lg-4">
-            <img src="https://www.luxurytravelmag.com.au/wp-content/uploads/2022/11/AudleyPublicHouse_Interior_Sim-Canetty-Clarke.jpg" class="card-img-top img-fluid border-bottom" alt="${eatName}"/>
             <div class="card-body">
               <p class="monoText my-0"><i class="bi bi-person-walking me-2"></i>${eatDistance}m</p>
               <h5 class="card-title mb-4">${eatName}</h5>
