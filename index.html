@@ -80,6 +80,7 @@
                   <div class="d-none d-lg-block col-lg-7 p-5" id="dogImage"></div>
             </div>
       </div>
+      <!-- End Jumbotron -->
 
       <!--- Welcome Modal -->
       <div class="modal" tabindex="-1" id="PawsPlannerModal">
@@ -128,7 +129,7 @@
                   </li>
             </ul>
       </nav>
-      <!-- Navbar -->
+      <!-- End Navbar -->
 
       <div class="container-fluid user-select-none mt-5" id="secondPage">
             <!-- Map Container -->
@@ -167,13 +168,18 @@
                                           <span role="status">Finding results...</span>
                                     </button>
                               </div>
+                              <div class="d-none d-flex justify-content-center align-items-center" id="noResults">
+                                    <button class="btn btn-sm btn-danger" type="button" disabled>
+                                          <span><i class="bi bi-emoji-frown"></i></span>
+                                          <span role="status">No results found.</span>
+                                    </button>
+                              </div>
                               <!-- container for place to append "places to eat" cards in JS -->
-                              <div class="container-fluid d-flex flex-nowrap p-0 mb-2" id="eatCardContainer">
+                              <div class="container-fluid d-flex flex-nowrap p-0 mb-4" id="eatCardContainer">
                               </div>
                         </div>
                   </div>
             </div>
-            <button type="button" class="btn btn-primary" onclick="getPlaces()">run geoapify api</button>
       </div>
 
 
