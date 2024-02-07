@@ -28,20 +28,25 @@ $(document).ready(function () {
         var todayIcon = `<img src="https://openweathermap.org/img/wn/${weatherTodayIcon}@2x.png"/>`;
 
         // Temperature conditions
-        var tempCelsius = $("<p>");
         var tempInCelsius = data.main.temp;
-        tempCelsius.text("Temp: " + tempInCelsius.toFixed(2) + "°C");
+        var tempCelsius = tempInCelsius.toFixed(1);
 
         // Wind conditions
-        var wind = $("<p>");
         var windInKPH = data.wind.speed * 3.6;
-        wind.text("Wind: " + windInKPH.toFixed(2) + " KPH");
+        var wind = windInKPH.toFixed(1);
 
         // Humidity conditions
-        var humidity = $("<p>").text("Humidity: " + data.main.humidity + "%");
+        var humidity = data.main.humidity;
 
         // Append to HTML container
-        currentWeather.append(todayIcon, tempCelsius, wind, humidity);
+        currentWeather.append(`
+        <div class="border rounded-pill my-4" id="weatherIcon">${todayIcon}</div>
+        <h4 class="my-2 mx-2"><i class="me-2 bi bi-thermometer-half" style="color: #A26769;"></i> ${tempCelsius} °C</h4>
+        <h4 class="my-2 mx-2"><i class="me-2 bi bi-wind" style="color: #41576b;"></i> ${wind} km/h</h4>
+        <h4 class="my-2 mb-4 mx-2"><i class="me-2 bi bi-droplet-half" style="color: #99B2DD;"></i>${humidity} %</h4>
+        `)
+        // currentWeather.append(todayIcon, tempCelsius, wind, humidity);
+
       });
   }
 
