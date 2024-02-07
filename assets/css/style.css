@@ -32,6 +32,11 @@ h4 {
     font-family: var(--header-font);
 }
 
+/* Modal */
+.modal-header {
+    display: inline;
+}
+
 /* Navbar  */
 .nav-link {
     color: var(--bs-body-color);
@@ -42,7 +47,7 @@ h4 {
 }
 
 /* coverpage background cards */
-.bgcard{
+.bgcard {
     background-color: var(--colbgcard);
     background-image: url(../images/nnnoise.svg);
     background-position: center;
@@ -53,53 +58,58 @@ h4 {
     transition: 1s ease;
 }
 
-.bgcard:hover{
+.bgcard:hover {
     cursor: pointer;
     z-index: 5;
 }
 
-#bgcard1{
+#bgcard1 {
     top: 20%;
     left: -2%;
     rotate: 40deg;
 }
-#bgcard1:hover{
+
+#bgcard1:hover {
     transform: translateX(40%) scale(1.5) rotate(20deg);
 }
 
-#bgcard2{
+#bgcard2 {
     top: -10%;
     left: 25%;
     rotate: 156deg;
 }
-#bgcard2:hover{
+
+#bgcard2:hover {
     transform: translateY(-70%) scale(1.5) rotate(30deg);
 }
 
-#bgcard3{
+#bgcard3 {
     bottom: -7.5%;
     right: 20%;
     rotate: 12deg;
 }
-#bgcard3:hover{
+
+#bgcard3:hover {
     transform: translateY(-50%) scale(1.5) rotate(-32deg);
 }
 
-#bgcard4{
+#bgcard4 {
     top: 10%;
-    right:-5.8%;
+    right: -5.8%;
     rotate: -76deg;
 }
-#bgcard4:hover{
+
+#bgcard4:hover {
     transform: translateY(-60%) scale(1.5) rotate(-20deg);
 }
 
-#bgcard5{
+#bgcard5 {
     bottom: -4%;
     left: 17.5%;
     rotate: -20deg;
 }
-#bgcard5:hover{
+
+#bgcard5:hover {
     transform: translateY(-40%) translateX(30%) scale(1.5) rotate(40deg);
 }
 
@@ -114,13 +124,13 @@ h4 {
     background-repeat: no-repeat;
 }
 
-.pageTitle{
+.pageTitle {
     font-family: 'Pally', sans-serif;
     font-size: calc(30px + 2vw);
     color: var(--colPrimaryDark);
 }
 
-#homecontainer{
+#homecontainer {
     z-index: 2;
     min-height: 75vh;
     width: 75%;
@@ -128,22 +138,23 @@ h4 {
     background-color: var(--colbgcard);
     background-image: url(../images/nnnoise.svg);
     background-position: center;
-    background-size: cover;;
+    background-size: cover;
+    ;
 }
 
-#dogImage{
+#dogImage {
     background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
-.btn-socialTag{
+.btn-socialTag {
     background-color: var(--colSecondary);
     transition: 0.5s ease;
 }
 
-.btn-socialTag:hover{
+.btn-socialTag:hover {
     background-color: var(--colPrimary);
     transform: rotate(10deg);
 }
@@ -189,11 +200,13 @@ h4 {
     transition: 0.5s ease-in-out;
 }
 
-#navLogo, #coverLogo {
+#navLogo,
+#coverLogo {
     transition: 0.5s ease;
 }
 
-#navLogo:hover, #coverLogo:hover {
+#navLogo:hover,
+#coverLogo:hover {
     scale: 1.2;
     rotate: 20deg;
     transition: 0.5s ease;
