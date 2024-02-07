@@ -25,11 +25,33 @@
     padding: 0;
 }
 
+body{
+    overflow-x: hidden;
+    background-image: url(../images/pawel-czerwinski-i0h7EEsOwNQ-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 h1,
 h2,
 h3,
 h4 {
     font-family: var(--header-font);
+}
+
+/* jquery ui */
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+}
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 /* Navbar  */
@@ -53,17 +75,14 @@ h4 {
     transition: 1s ease;
 }
 
-.bgcard:hover{
-    cursor: pointer;
-    z-index: 5;
-}
-
 #bgcard1{
     top: 20%;
     left: -2%;
     rotate: 40deg;
 }
 #bgcard1:hover{
+    cursor: pointer;
+    z-index: 5;
     transform: translateX(40%) scale(1.5) rotate(20deg);
 }
 
@@ -73,6 +92,8 @@ h4 {
     rotate: 156deg;
 }
 #bgcard2:hover{
+    cursor: pointer;
+    z-index: 5;
     transform: translateY(-70%) scale(1.5) rotate(30deg);
 }
 
@@ -82,6 +103,8 @@ h4 {
     rotate: 12deg;
 }
 #bgcard3:hover{
+    cursor: pointer;
+    z-index: 5;
     transform: translateY(-50%) scale(1.5) rotate(-32deg);
 }
 
@@ -91,6 +114,8 @@ h4 {
     rotate: -76deg;
 }
 #bgcard4:hover{
+    cursor: pointer;
+    z-index: 5;
     transform: translateY(-60%) scale(1.5) rotate(-20deg);
 }
 
@@ -100,6 +125,8 @@ h4 {
     rotate: -20deg;
 }
 #bgcard5:hover{
+    cursor: pointer;
+    z-index: 5;
     transform: translateY(-40%) translateX(30%) scale(1.5) rotate(40deg);
 }
 
