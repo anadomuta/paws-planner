@@ -81,17 +81,11 @@ h4 {
     transition: 1s ease;
 }
 
-.bgcard:hover {
-    cursor: pointer;
-    z-index: 5;
-}
-
 #bgcard1 {
     top: 20%;
     left: -2%;
     rotate: 40deg;
 }
-
 
 #bgcard1:hover {
     cursor: pointer;
