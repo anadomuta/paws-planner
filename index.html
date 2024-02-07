@@ -83,23 +83,22 @@
       <!-- End Jumbotron -->
 
       <!--- Welcome Modal -->
-      <div class="modal" tabindex="-1" id="PawsPlannerModal">
+      <div class="modal modal-lg" tabindex="-1" id="PawsPlannerModal">
             <div class="modal-dialog">
                   <div class="modal-content">
-                        <div class="modal-header">
-                              <h5 class="modal-title">🐾 Welcome to Paws Planner! 🐾</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                        <div class="modal-header text-center">
+                              <h5 class="modal-title fs-1">🐾 Welcome to Paws Planner! 🐾</h5>
                         </div>
-                        <div class="modal-body">
-                              <p>Welcome to Paws Planner, where pet-friendly adventure awaits! 🌟 Search any location,
+                        <div class="modal-body text-center fs-4">
+                              <p>... where pet-friendly adventure awaits! 🌟 <br><br> Search any location,
                                     and unveil a world of tail-wagging fun. From charming cafes to scenic spots, we've
-                                    fetched the best places for you and your furry sidekick. Ready to explore? Let's
-                                    make every outing a paw-some memory! 🐶🗺️✨</p>
+                                    fetched the best places for you and your furry sidekick. <br><br> Ready to explore?
+                                    <br>
+                                    Let's make every outing a paw-some memory! 🐶🗺️
+                              </p>
                         </div>
                         <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary" id="letsGetStartedBtn">Let's get
+                              <button type="button" class="btn btn-info fs-5" id="letsGetStartedBtn">Let's get
                                     started!</button>
                         </div>
                   </div>
@@ -113,21 +112,24 @@
       <nav class="user-select-none p-3 rounded-3 sticky-top d-none customNav" id="navigationBar">
             <ul
                   class="nav py-2 px-3 rounded-3 border navbar-expand-lg d-flex justify-content-start align-items-center sticky-top">
-                  <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4"
-                        style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;" id="navLogo">
-                  <h5 class="ms-2 me-5 my-0" style="font-family: 'Pally', sans-serif; ">Paws Planner</h5>
-                  <li class="nav-item mx-3">
-                        <a class="btn btn-secondary btn-sm nav-link py-1 px-3" href="#home"
-                              title="Visit the home page."><i class="bi bi-house-heart-fill m-0 me-md-2"></i><span
-                                    class="d-none d-md-inline">Home</span></a>
-                  </li>
-                  <li class="nav-item mx-3">
-                        <a class="btn btn-secondary btn-sm nav-link py-1 px-3" href="#"
-                              title="Read about our latest travels!"><i
-                                    class="bi bi-blockquote-left m-0 me-md-2"></i><span
-                                    class="d-none d-md-inline">Blog</span></a>
-                  </li>
-            </ul>
+                  <ul
+                        class="nav py-2 px-3 rounded-3 border navbar-expand-lg d-flex justify-content-start align-items-center sticky-top">
+                        <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4"
+                              style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;"
+                              id="navLogo">
+                        <h5 class="ms-2 me-5 my-0" style="font-family: 'Pally', sans-serif; ">Paws Planner</h5>
+                        <li class="nav-item mx-3">
+                              <a class="btn btn-secondary btn-sm nav-link py-1 px-3" href="#home"
+                                    title="Visit the home page."><i class="bi bi-house-heart-fill m-0 me-md-2"></i><span
+                                          class="d-none d-md-inline">Home</span></a>
+                        </li>
+                        <li class="nav-item mx-3">
+                              <a class="btn btn-secondary btn-sm nav-link py-1 px-3" href="#"
+                                    title="Read about our latest travels!"><i
+                                          class="bi bi-blockquote-left m-0 me-md-2"></i><span
+                                          class="d-none d-md-inline">Blog</span></a>
+                        </li>
+                  </ul>
       </nav>
       <!-- End Navbar -->
 
@@ -137,14 +139,16 @@
                   <div class="col-8 mx-auto mh-100 p-0 position-relative">
                         <!-- Map Element -->
                         <div id="mapContainer" class="col-12 w-auto h-100 position-relative top-0 start-0">
-                              <div id="map" class="rounded-5 w-auto h-100 border border-dark"></div>
+                              <div id="map" class="rounded-5 w-auto h-100 border border-dark">
+                              </div>
                         </div>
                         <!-- Search Button -->
                         <form type="searcharea2" class="mx-5 position-absolute bottom-0 start-50 translate-middle">
                               <h1 class="text-center"><input
                                           class="px-5 py-2 text-center border-dark rounded-3 text-body-light bg-light bg-opacity-75"
                                           type="text" id="searcharea2" placeholder="Search in the area..."
-                                          style="font-family: 'Cabinet Grotesk', var(--body-font), sans-serif;"></h1>
+                                          style="font-family: 'Cabinet Grotesk', var(--body-font), sans-serif;">
+                              </h1>
                         </form>
                   </div>
             </div>
