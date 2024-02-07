@@ -91,6 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
             eatWheelchair = "Unknown";
           }
 
+          if (!eatName)
+
           $("#eatCardContainer").append(`
           <div class="card rounded mx-1 col-5 col-lg-4">
             <div class="card-body">
