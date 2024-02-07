@@ -92,164 +92,164 @@ h4 {
     rotate: 40deg;
 }
 
+
 #bgcard1:hover {
-    #bgcard1:hover {
-        cursor: pointer;
-        z-index: 5;
-        transform: translateX(40%) scale(1.5) rotate(20deg);
-    }
+    cursor: pointer;
+    z-index: 5;
+    transform: translateX(40%) scale(1.5) rotate(20deg);
+}
 
-    #bgcard2 {
-        top: -10%;
-        left: 25%;
-        rotate: 156deg;
-    }
+#bgcard2 {
+    top: -10%;
+    left: 25%;
+    rotate: 156deg;
+}
 
-    #bgcard2:hover {
-        cursor: pointer;
-        z-index: 5;
-        transform: translateY(-70%) scale(1.5) rotate(30deg);
-    }
+#bgcard2:hover {
+    cursor: pointer;
+    z-index: 5;
+    transform: translateY(-70%) scale(1.5) rotate(30deg);
+}
 
-    #bgcard3 {
-        bottom: -7.5%;
-        right: 20%;
-        rotate: 12deg;
-    }
+#bgcard3 {
+    bottom: -7.5%;
+    right: 20%;
+    rotate: 12deg;
+}
 
-    #bgcard3:hover {
-        cursor: pointer;
-        z-index: 5;
-        transform: translateY(-50%) scale(1.5) rotate(-32deg);
-    }
+#bgcard3:hover {
+    cursor: pointer;
+    z-index: 5;
+    transform: translateY(-50%) scale(1.5) rotate(-32deg);
+}
 
-    #bgcard4 {
-        top: 10%;
-        right: -5.8%;
-        rotate: -76deg;
-    }
+#bgcard4 {
+    top: 10%;
+    right: -5.8%;
+    rotate: -76deg;
+}
 
-    #bgcard4:hover {
-        cursor: pointer;
-        z-index: 5;
-        transform: translateY(-60%) scale(1.5) rotate(-20deg);
-    }
+#bgcard4:hover {
+    cursor: pointer;
+    z-index: 5;
+    transform: translateY(-60%) scale(1.5) rotate(-20deg);
+}
 
-    #bgcard5 {
-        bottom: -4%;
-        left: 17.5%;
-        rotate: -20deg;
-    }
+#bgcard5 {
+    bottom: -4%;
+    left: 17.5%;
+    rotate: -20deg;
+}
 
-    #bgcard5:hover {
-        cursor: pointer;
-        z-index: 5;
-        transform: translateY(-40%) translateX(30%) scale(1.5) rotate(40deg);
-    }
+#bgcard5:hover {
+    cursor: pointer;
+    z-index: 5;
+    transform: translateY(-40%) translateX(30%) scale(1.5) rotate(40deg);
+}
 
-    /* Jumbotron  */
-    #home {
-        overflow: hidden;
-        min-height: 100vh;
-        width: 100vw;
-        background-image: url(../images/jonathan-roger-LY1eyQMFeyo-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+/* Jumbotron  */
+#home {
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(../images/jonathan-roger-LY1eyQMFeyo-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-    .pageTitle {
-        font-family: 'Pally', sans-serif;
-        font-size: calc(30px + 2vw);
-        color: var(--colPrimaryDark);
-    }
+.pageTitle {
+    font-family: 'Pally', sans-serif;
+    font-size: calc(30px + 2vw);
+    color: var(--colPrimaryDark);
+}
 
-    #homecontainer {
-        z-index: 2;
-        min-height: 75vh;
-        width: 75%;
-        rotate: -2.5deg;
-        background-color: var(--colbgcard);
-        background-image: url(../images/nnnoise.svg);
-        background-position: center;
-        background-size: cover;
-        ;
-    }
+#homecontainer {
+    z-index: 2;
+    min-height: 75vh;
+    width: 75%;
+    rotate: -2.5deg;
+    background-color: var(--colbgcard);
+    background-image: url(../images/nnnoise.svg);
+    background-position: center;
+    background-size: cover;
+    ;
+}
 
-    #dogImage {
-        background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-    }
+#dogImage {
+    background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
 
-    .btn-socialTag {
-        background-color: var(--colSecondary);
-        transition: 0.5s ease;
-    }
+.btn-socialTag {
+    background-color: var(--colSecondary);
+    transition: 0.5s ease;
+}
 
-    .btn-socialTag:hover {
-        background-color: var(--colPrimary);
-        transform: rotate(10deg);
-    }
+.btn-socialTag:hover {
+    background-color: var(--colPrimary);
+    transform: rotate(10deg);
+}
 
-    /* Second page */
-    #secondPage {
-        font-weight: 300;
-    }
+/* Second page */
+#secondPage {
+    font-weight: 300;
+}
 
-    #locationInfo,
-    #map {
-        overflow-y: auto;
-        font-size: 0.85rem;
-    }
+#locationInfo,
+#map {
+    overflow-y: auto;
+    font-size: 0.85rem;
+}
 
-    #locationInfo h3 {
-        font-family: var(--header-font);
-    }
+#locationInfo h3 {
+    font-family: var(--header-font);
+}
 
-    #todayWeather {
-        text-align: center;
-    }
+#todayWeather {
+    text-align: center;
+}
 
-    #eatCardContainer,
-    #activityCardContainer {
-        overflow-x: auto;
-    }
+#eatCardContainer,
+#activityCardContainer {
+    overflow-x: auto;
+}
 
-    .monoText {
-        font-family: monospace;
-        font-size: 0.8rem;
-    }
+.monoText {
+    font-family: monospace;
+    font-size: 0.8rem;
+}
 
-    /* Animations / Transitions */
-    #searchButton {
-        background-color: var(--colContrast);
-        transition: 0.5s ease-in-out;
-    }
+/* Animations / Transitions */
+#searchButton {
+    background-color: var(--colContrast);
+    transition: 0.5s ease-in-out;
+}
 
-    #searchButton:hover {
-        transform-origin: left;
-        scale: 1.2;
-        transition: 0.5s ease-in-out;
-    }
+#searchButton:hover {
+    transform-origin: left;
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+}
 
-    #navLogo,
-    #coverLogo {
-        transition: 0.5s ease;
-    }
+#navLogo,
+#coverLogo {
+    transition: 0.5s ease;
+}
 
-    #navLogo:hover,
-    #coverLogo:hover {
-        scale: 1.2;
-        rotate: 20deg;
-        transition: 0.5s ease;
-    }
+#navLogo:hover,
+#coverLogo:hover {
+    scale: 1.2;
+    rotate: 20deg;
+    transition: 0.5s ease;
+}
 
-    nav ul {
-        background-color: rgba(var(--bs-light-rgb), 0.5);
-    }
+nav ul {
+    background-color: rgba(var(--bs-light-rgb), 0.5);
+}
 
-    nav ul:hover {
-        background-color: rgba(var(--bs-light-rgb), 1);
-    }
+nav ul:hover {
+    background-color: rgba(var(--bs-light-rgb), 1);
+}
