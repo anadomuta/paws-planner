@@ -32,24 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fetch places using lat and lon from previous API
   function fetchPlaces(lon, lat) {
+    
+    // clear existing cards/filters if present
     $("#activeCategories").empty()
     $("#eatCardContainer").empty()
     $("#noResults").addClass("d-none");
     $("#loadingStatus").removeClass("d-none");
+
     var categories = ["pet"]; // an array of categories user wants to search for as per: https://apidocs.geoapify.com/docs/places/#categories
     var conditions = []; // an array of additional conditions user wants to search for as per: https://apidocs.geoapify.com/docs/places/#conditions
-    var radius = "10000";
+    var radius = "10000"; 
 
-    categories.forEach((element) => {
-      $("#activeCategories").append(
-        `<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`
-      );
-    });
-    conditions.forEach((element) => {
-      $("#activeCategories").append(
-        `<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`
-      );
-    });
+    categories.forEach((element) => {$("#activeCategories").append(`<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`);});
+    conditions.forEach((element) => {$("#activeCategories").append(`<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`);});
 
     var queryURLPlaces = `https://api.geoapify.com/v2/places?categories=${categories.join(",")}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`;
 
@@ -63,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (result.features.length === 0){
           $("#loadingStatus").addClass("d-none");
           $("#noResults").removeClass("d-none");
-        } else {
-
         }
         result.features.forEach((searchResult) => {
           console.log("Adding result to page...");
@@ -84,16 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
             isDisabled = "disabled";
             isAriaDisabled = "true";
           }
-          if (!eatOpeningHrs){
-            eatOpeningHrs = "Unknown";
-          }
-          if (!eatWheelchair){
-            eatWheelchair = "Unknown";
-          }
-
-          if (!eatName) {
-            eatName = "Unknown";
-          }
+          if (!eatOpeningHrs){eatOpeningHrs = "Unknown";}
+          if (!eatWheelchair){eatWheelchair = "Unknown";}
+          if (!eatName) {eatName = "Unknown";}
 
           $("#eatCardContainer").append(`
           <div class="card rounded mx-1 col-5 col-lg-4">
