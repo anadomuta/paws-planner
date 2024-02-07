@@ -142,14 +142,16 @@ document.addEventListener("DOMContentLoaded", function () {
     welcomeModal.show();
   }
   // Add click event listener to the "Let's get started" button
-   document.getElementById("letsGetStartedBtn").addEventListener("click", function () {
-    // Set a flag in localStorage to indicate that the modal has been seen
-    localStorage.setItem("showModal", "false");
+  document
+    .getElementById("letsGetStartedBtn")
+    .addEventListener("click", function () {
+      // Set a flag in localStorage to indicate that the modal has been seen
+      localStorage.setItem("showModal", "false");
 
-    // Hide modal
-    var welcomeModal = bootstrap.Modal.getInstance(document.getElementById("PawsPlannerModal"));
-    if (welcomeModal) {
-        welcomeModal.hide();
-    }
-});
+      // Hide modal
+      var welcomeModal = new bootstrap.Modal(
+        document.getElementById("PawsPlannerModal")
+      );
+      welcomeModal.hide();
+    });
 });
