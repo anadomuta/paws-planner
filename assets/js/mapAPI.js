@@ -27,17 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Display location of searched city on the map
   function moveMapToLocation(map, lat, lon) {
     map.setCenter({ lat: lat, lng: lon });
-    map.setZoom(16);
+    map.setZoom(12);
   }
 
   // Fetch places using lat and lon from previous API
   function fetchPlaces(lon, lat) {
+    $("#activeCategories").empty()
+    $("#eatCardContainer").empty()
+    $("#noResults").addClass("d-none");
     $("#loadingStatus").removeClass("d-none");
-    var categories = ["catering"]; // an array of categories user wants to search for as per: https://apidocs.geoapify.com/docs/places/#categories
-    var conditions = ["dogs", "wheelchair"]; // an array of additional conditions user wants to search for as per: https://apidocs.geoapify.com/docs/places/#conditions
+    var categories = ["pet"]; // an array of categories user wants to search for as per: https://apidocs.geoapify.com/docs/places/#categories
+    var conditions = []; // an array of additional conditions user wants to search for as per: https://apidocs.geoapify.com/docs/places/#conditions
     var radius = "10000";
-    var stringLat = JSON.stringify(lat);
-    var stringLon = JSON.stringify(lon);
 
     categories.forEach((element) => {
       $("#activeCategories").append(
@@ -50,46 +51,55 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
-    var queryURLPlaces =
-      "https://api.geoapify.com/v2/places?categories=pet&filter=circle:" +
-      lon +
-      "," +
-      lat +
-      ",10000&bias=proximity:" +
-      lon +
-      "," +
-      lat +
-      "&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47";
+    var queryURLPlaces = `https://api.geoapify.com/v2/places?categories=${categories.join(",")}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`;
 
     fetch(queryURLPlaces)
       .then(function (response) {
         return response.json();
       })
       .then(function loadCards(result) {
+        console.log(result)
+        // if there are no results, inform user:
+        if (result.features.length === 0){
+          $("#loadingStatus").addClass("d-none");
+          $("#noResults").removeClass("d-none");
+        } else {
+
+        }
         result.features.forEach((searchResult) => {
           console.log("Adding result to page...");
-          const eatName = searchResult.properties.name;
-          const eatLocation = searchResult.properties.address_line2;
-          const isEatLink = "Visit Site";
-          const eatWebsiteLink = searchResult.properties.datasource.raw.website;
-          const eatOpeningHrs =
-            searchResult.properties.datasource.raw.opening_hours;
-          const eatWheelchair =
-            searchResult.properties.datasource.raw.wheelchair;
-          const eatDistance = searchResult.properties.distance;
+          var eatName = searchResult.properties.name;
+          var eatLocation = searchResult.properties.address_line2;
+          var eatWebsiteLink = searchResult.properties.datasource.raw.website;
+          var isEatLink = "Visit website";
+          var eatOpeningHrs = searchResult.properties.datasource.raw.opening_hours;
+          var eatWheelchair = searchResult.properties.datasource.raw.wheelchair;
+          var eatDistance = searchResult.properties.distance;
+          var isDisabled = "";
+          var isAriaDisabled = "false";
 
           // need to add if logic to change variables based on data received. e.g. if no website link remove that button or smth
+          if (!eatWebsiteLink){
+            isEatLink = "No website";
+            isDisabled = "disabled";
+            isAriaDisabled = "true";
+          }
+          if (!eatOpeningHrs){
+            eatOpeningHrs = "Unknown";
+          }
+          if (!eatWheelchair){
+            eatWheelchair = "Unknown";
+          }
 
           $("#eatCardContainer").append(`
-          <div class="card rounded-0 border-start-0 col-5 col-lg-4" id="eatCard1">
-            <img src="./assets/images/PLACEHOLDER restaurant1Image.png" class="card-img-top img-fluid rounded-0 border-bottom" alt="${eatName}"/>
+          <div class="card rounded mx-1 col-5 col-lg-4">
             <div class="card-body">
+              <p class="monoText my-0"><i class="bi bi-person-walking me-2"></i>${eatDistance}m</p>
               <h5 class="card-title mb-4">${eatName}</h5>
               <h6 class="card-subtitle mb-2 text-body-secondary"><i class="bi bi-geo-alt-fill me-2"></i>${eatLocation}</h6>
-              <p class="monoText"><i class="bi bi-person-walking me-2"></i>${eatDistance}m</p>
               <p class="my-0 monoText"><i class="bi bi-clock me-2"></i>${eatOpeningHrs}</p>
               <p class="my-0 monoText"><i class="bi bi-person-wheelchair me-2"></i>${eatWheelchair}</p>
-              <a target="_blank" href="${eatWebsiteLink}" class="btn btn-sm btn-primary mt-2 py-1">${isEatLink}</a>
+              <a target="_blank" href="${eatWebsiteLink}" class="btn btn-sm btn-primary rounded-pill mt-2 py-1 ${isDisabled}" aria-disabled="${isAriaDisabled}"><p class="my-0 monoText">${isEatLink}</p></a>
             </div>
           </div>
           `);
