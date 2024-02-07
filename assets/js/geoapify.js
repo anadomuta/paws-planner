@@ -1,38 +1,52 @@
-function getPlaces(){
-  $("#loadingStatus").removeClass("d-none")
-  var categories = ["catering"] // an array? of categories user wants to search for as per: https://apidocs.geoapify.com/docs/places/#categories
-  var conditions = ["dogs", "wheelchair"] // an array? of additional conditions user wants to search for as per: https://apidocs.geoapify.com/docs/places/#conditions
-  var lon = "-0.1252584240406704" //longitude
-  var lat = "51.510634994721855" //latitude
-  var radius = "10000" //search radius in metres, e.g. 5000
+function getPlaces() {
+  $("#loadingStatus").removeClass("d-none");
+  var categories = ["catering"]; // an array? of categories user wants to search for as per: https://apidocs.geoapify.com/docs/places/#categories
+  var conditions = ["dogs", "wheelchair"]; // an array? of additional conditions user wants to search for as per: https://apidocs.geoapify.com/docs/places/#conditions
 
-  categories.forEach(element => {
-    $("#activeCategories").append(`<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`)
+  var lon = "-0.1252584240406704"; //longitude
+  var lat = "51.510634994721855"; //latitude
+  var radius = "10000"; //search radius in metres, e.g. 5000
+
+  categories.forEach((element) => {
+    $("#activeCategories").append(
+      `<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`
+    );
   });
-  conditions.forEach(element => {
-    $("#activeCategories").append(`<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`)
-  })
+  conditions.forEach((element) => {
+    $("#activeCategories").append(
+      `<h6 class="d-inline me-2"><span class="badge bg-secondary">${element}</span></h6>`
+    );
+  });
 
-  fetch(`https://api.geoapify.com/v2/places?categories=${categories.join(',')}&conditions=${conditions.join(',')}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`)
-    .then(response => response.json())
-    .then(function loadCards(result){
-      console.log(`https://api.geoapify.com/v2/places?categories=${categories}&conditions=${conditions}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`)
-      console.log(result)
-      result.features.forEach(searchResult => {
-        console.log("Adding result to page...")
-        const eatName = searchResult.properties.name
-        const eatLocation = searchResult.properties.address_line2
-        const isEatLink = "Visit Site"
-        const eatWebsiteLink = searchResult.properties.datasource.raw.website
-        const eatOpeningHrs = searchResult.properties.datasource.raw.opening_hours
-        const eatWheelchair = searchResult.properties.datasource.raw.wheelchair
-        const eatDistance = searchResult.properties.distance
-      
+  fetch(
+    `https://api.geoapify.com/v2/places?categories=${categories.join(
+      ","
+    )}&conditions=${conditions.join(
+      ","
+    )}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`
+  )
+    .then((response) => response.json())
+    .then(function loadCards(result) {
+      console.log(
+        `https://api.geoapify.com/v2/places?categories=${categories}&conditions=${conditions}&filter=circle:${lon},${lat},${radius}&bias=proximity:${lon},${lat}&lang=en&limit=20&apiKey=fe9a326d269345a4b9e1136bfdae6a47`
+      );
+      console.log(result);
+      result.features.forEach((searchResult) => {
+        console.log("Adding result to page...");
+        const eatName = searchResult.properties.name;
+        const eatLocation = searchResult.properties.address_line2;
+        const isEatLink = "Visit Site";
+        const eatWebsiteLink = searchResult.properties.datasource.raw.website;
+        const eatOpeningHrs =
+          searchResult.properties.datasource.raw.opening_hours;
+        const eatWheelchair = searchResult.properties.datasource.raw.wheelchair;
+        const eatDistance = searchResult.properties.distance;
+
         // if (!eatWebsiteLink){isEatLink = "No Website"}
 
         // need to add if logic to change variables based on data received. e.g. if no website link remove that button or smth
 
-        $('#eatCardContainer').append(`
+        $("#eatCardContainer").append(`
         <div class="card rounded-0 border-start-0 col-5 col-lg-4" id="eatCard1">
           <img src="./assets/images/PLACEHOLDER restaurant1Image.png" class="card-img-top img-fluid rounded-0 border-bottom" alt="${eatName}"/>
           <div class="card-body">
@@ -44,38 +58,42 @@ function getPlaces(){
             <a target="_blank" href="${eatWebsiteLink}" class="btn btn-sm btn-primary mt-2 py-1">${isEatLink}</a>
           </div>
         </div>
-        `)
-
+        `);
       });
-    $("#loadingStatus").addClass("d-none")
+      $("#loadingStatus").addClass("d-none");
     })
-    .catch(error => console.log('error', error));
+    .catch((error) => console.log("error", error));
 }
-
 
 //jQuery UI autocomplete function
 
-$( function() {
-  $.widget( "custom.catcomplete", $.ui.autocomplete, {
-    _create: function() {
+$(function () {
+  $.widget("custom.catcomplete", $.ui.autocomplete, {
+    _create: function () {
       this._super();
-      this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+      this.widget().menu(
+        "option",
+        "items",
+        "> :not(.ui-autocomplete-category)"
+      );
     },
-    _renderMenu: function( ul, items ) {
+    _renderMenu: function (ul, items) {
       var that = this,
         currentCategory = "";
-      $.each( items, function( index, item ) {
+      $.each(items, function (index, item) {
         var li;
-        if ( item.category != currentCategory ) {
-          ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+        if (item.category != currentCategory) {
+          ul.append(
+            "<li class='ui-autocomplete-category'>" + item.category + "</li>"
+          );
           currentCategory = item.category;
         }
-        li = that._renderItemData( ul, item );
-        if ( item.category ) {
-          li.attr( "aria-label", item.category + " : " + item.label );
+        li = that._renderItemData(ul, item);
+        if (item.category) {
+          li.attr("aria-label", item.category + " : " + item.label);
         }
       });
-    }
+    },
   });
   var data = [
     { label: "restaurants", category: "Restaurant" },
@@ -196,9 +214,9 @@ $( function() {
     { label: "biergarten", category: "" },
     { label: "taproom", category: "" },
   ];
-  
-  $( "#searcharea2" ).catcomplete({
+
+  $("#searcharea2").catcomplete({
     delay: 0,
-    source: data
+    source: data,
   });
-} );
+});
