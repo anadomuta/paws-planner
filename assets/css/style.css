@@ -1,10 +1,10 @@
 /* Universal Settings */
 :root {
     scroll-behavior: smooth;
-    /* fonts */
+    /* Fonts */
     --body-font: 'Noto Sans', sans-serif;
     --header-font: 'Cabinet Grotesk', 'Noto Sans', sans-serif;
-    /* colours */
+    /* Colours */
     --colPrimary: #8c98c8;
     --colPrimaryDark: #525871;
     --colSecondary: #566a79;
@@ -17,6 +17,7 @@
     --colbgcard: #e5e6e3;
 }
 
+/* Global Styles */
 * {
     font-family: var(--body-font);
     transition: ease 0.5s;
@@ -39,8 +40,7 @@ h4 {
     font-family: var(--header-font);
 }
 
-/* jquery ui */
-
+/* jQuery UI */
 .ui-autocomplete-category {
     font-weight: bold;
     padding: .2em .4em;
@@ -60,16 +60,7 @@ h4 {
     display: inline;
 }
 
-/* Navbar  */
-.nav-link {
-    color: var(--bs-body-color);
-}
-
-.nav-link:hover {
-    color: white;
-}
-
-/* coverpage background cards */
+/* Coverpage Background Cards */
 .bgcard {
     background-color: var(--colbgcard);
     background-image: url(../images/nnnoise.svg);
@@ -177,6 +168,7 @@ h4 {
     background-position: bottom;
 }
 
+/* Social Tag Buttons */
 .btn-socialTag {
     background-color: var(--colSecondary);
     transition: 0.5s ease;
@@ -192,6 +184,36 @@ h4 {
     font-weight: 300;
 }
 
+/* Navbar */
+.nav-link {
+    color: var(--bs-body-color);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+#navLogo,
+#coverLogo {
+    transition: 0.5s ease;
+}
+
+#navLogo:hover,
+#coverLogo:hover {
+    scale: 1.2;
+    rotate: 20deg;
+    transition: 0.5s ease;
+}
+
+nav ul {
+    background-color: rgba(var(--bs-light-rgb), 0.5);
+}
+
+nav ul:hover {
+    background-color: rgba(var(--bs-light-rgb), 1);
+}
+
+/* Map Container */
 #locationInfo,
 #map {
     overflow-y: auto;
@@ -202,6 +224,7 @@ h4 {
     font-family: var(--header-font);
 }
 
+/* Weather Container */
 #todayWeather {
     text-align: center;
 }
@@ -228,27 +251,7 @@ h4 {
     transition: 0.5s ease-in-out;
 }
 
-/* Navbar */
-#navLogo,
-#coverLogo {
-    transition: 0.5s ease;
-}
-
-#navLogo:hover,
-#coverLogo:hover {
-    scale: 1.2;
-    rotate: 20deg;
-    transition: 0.5s ease;
-}
-
-nav ul {
-    background-color: rgba(var(--bs-light-rgb), 0.5);
-}
-
-nav ul:hover {
-    background-color: rgba(var(--bs-light-rgb), 1);
-}
-
+/* Footer */
 footer {
     text-align: center;
 }
