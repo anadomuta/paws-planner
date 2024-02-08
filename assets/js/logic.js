@@ -23,13 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("Error fetching data:", error);
       }
   }
-
   // Function to display location of searched city on the map
   function moveMapToLocation(map, lat, lon) {
       map.setCenter({ lat: lat, lng: lon });
       map.setZoom(12);
   }
-
   // Function to fetch places using lat and lon from previous API
   function fetchPlaces(lon, lat) {
       // Clear existing cards/filters if present
@@ -85,36 +83,31 @@ document.addEventListener("DOMContentLoaded", function () {
               $("#loadingStatus").addClass("d-none");
           })
           .catch((error) => console.log("error", error));
+          });
   }
-
   // Function to fetch current weather for a given city
   function fetchCurrentWeather(city) {
       var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKeyWeather}`;
 
-      fetch(queryURL)
-          .then(function (response) {
-              return response.json();
-          })
-          .then(function (data) {
-              // Display current weather conditions for selected city
-              const currentWeather = $("#todayWeather");
-              currentWeather.empty();
+      $.getJSON(queryURL, function (data) {
+          // Display current weather conditions for selected city
+          const currentWeather = $("#todayWeather");
+          currentWeather.empty();
 
-              const weatherTodayIcon = data.weather[0].icon;
-              const todayIcon = `<img src="https://openweathermap.org/img/wn/${weatherTodayIcon}@2x.png"/>`;
-              const tempCelsius = data.main.temp.toFixed(1);
-              const wind = (data.wind.speed * 3.6).toFixed(1);
-              const humidity = data.main.humidity;
+          const weatherTodayIcon = data.weather[0].icon;
+          const todayIcon = `<img src="https://openweathermap.org/img/wn/${weatherTodayIcon}@2x.png"/>`;
+          const tempCelsius = data.main.temp.toFixed(1);
+          const wind = (data.wind.speed * 3.6).toFixed(1);
+          const humidity = data.main.humidity;
 
-              currentWeather.append(`
-                  <div class="border rounded-pill my-4" id="weatherIcon">${todayIcon}</div>
-                  <h4 class="my-2 mx-2"><i class="me-2 bi bi-thermometer-half" style="color: #A26769;"></i> ${tempCelsius} °C</h4>
-                  <h4 class="my-2 mx-2"><i class="me-2 bi bi-wind" style="color: #41576b;"></i> ${wind} km/h</h4>
-                  <h4 class="my-2 mb-4 mx-2"><i class="me-2 bi bi-droplet-half" style="color: #99B2DD;"></i>${humidity} %</h4>
-              `);
-          });
+          currentWeather.append(`
+              <div class="border rounded-pill my-4" id="weatherIcon">${todayIcon}</div>
+              <h4 class="my-2 mx-2"><i class="me-2 bi bi-thermometer-half" style="color: #A26769;"></i> ${tempCelsius} °C</h4>
+              <h4 class="my-2 mx-2"><i class="me-2 bi bi-wind" style="color: #41576b;"></i> ${wind} km/h</h4>
+              <h4 class="my-2 mb-4 mx-2"><i class="me-2 bi bi-droplet-half" style="color: #99B2DD;"></i>${humidity} %</h4>
+          `);
+      });
   }
-
   // Function to add pins to the map
   function addPinToMap(lat, lon, title) {
       var marker = new H.map.Marker({ lat: lat, lng: lon });
@@ -129,15 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
       zoom: 4,
       pixelRatio: window.devicePixelRatio || 1,
   });
-
   // Set up the map UI
   var ui = H.ui.UI.createDefault(map, defaultLayers);
 
   // Event listeners
   window.addEventListener("resize", () => map.getViewPort().resize());
 
-  document.getElementById("searchButton").addEventListener("click", function () {
-      const location = document.getElementById("locationInput").value;
+  $("#searchButton").on("click", function () {
+      const location = $("#locationInput").val();
       fetchData(location);
       window.location.href = "#navigationBar";
       $(".customNav").removeClass("d-none");
@@ -146,58 +138,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Check if the modal should be shown
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if the modal should be shown per device
   var shouldShowModal = localStorage.getItem("showModal");
   if (shouldShowModal !== "false") {
       // Show modal
       var welcomeModal = new bootstrap.Modal(document.getElementById("PawsPlannerModal"), { backdrop: "static" });
       welcomeModal.show();
   }
-
   // Add click event listener to the "Let's get started" button
-  document.getElementById("letsGetStartedBtn").addEventListener("click", function () {
+ $("#letsGetStartedBtn").on("click", function () {
       // Set a flag in localStorage to indicate that the modal has been seen
       localStorage.setItem("showModal", "false");
-
       // Hide modal
       var welcomeModal = bootstrap.Modal.getInstance(document.getElementById("PawsPlannerModal"));
       if (welcomeModal) {
           welcomeModal.hide();
       }
   });
-});
 
-$(document).ready(function () {
   var searchButton = $("#searchButton");
   var cityInput = $("#locationInput");
 
   // Event listener for fetching current weather
-  function fetchCurrentWeather(city) {
-      var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKeyWeather}`;
-
-      fetch(queryURL)
-          .then(function (response) {
-              return response.json();
-          })
-          .then(function (data) {
-              const currentWeather = $("#todayWeather");
-              currentWeather.empty();
-
-              const weatherTodayIcon = data.weather[0].icon;
-              const todayIcon = `<img src="https://openweathermap.org/img/wn/${weatherTodayIcon}@2x.png"/>`;
-              const tempCelsius = data.main.temp.toFixed(1);
-              const wind = (data.wind.speed * 3.6).toFixed(1);
-              const humidity = data.main.humidity;
-
-              currentWeather.append(`
-                  <div class="border rounded-pill my-4" id="weatherIcon">${todayIcon}</div>
-                  <h4 class="my-2 mx-2"><i class="me-2 bi bi-thermometer-half" style="color: #A26769;"></i> ${tempCelsius} °C</h4>
-                  <h4 class="my-2 mx-2"><i class="me-2 bi bi-wind" style="color: #41576b;"></i> ${wind} km/h</h4>
-                  <h4 class="my-2 mb-4 mx-2"><i class="me-2 bi bi-droplet-half" style="color: #99B2DD;"></i>${humidity} %</h4>
-              `);
-          });
-  }
-
-  // Event listener for search button
   searchButton.on("click", function () {
       var city = cityInput.val();
       fetchCurrentWeather(city);
