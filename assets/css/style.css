@@ -27,7 +27,7 @@
 
 body {
     overflow-x: hidden;
-    background-image: url(../images/pawel-czerwinski-i0h7EEsOwNQ-unsplash.jpg);
+    background-image: url(../images/second-page-background.PNG);
     background-position: center;
     background-size: cover;
 }
@@ -146,7 +146,7 @@ h4 {
     overflow: hidden;
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/jonathan-roger-LY1eyQMFeyo-unsplash.jpg);
+    background-image: url(../images/landing-page-background.PNG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -171,7 +171,7 @@ h4 {
 }
 
 #dogImage {
-    background-image: url(../images/Dog_Silhouette_PNG_Transparent_Clip_Art_Image.png);
+    background-image: url(../images/dog-silhouette-transparent-background.PNG);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -228,6 +228,7 @@ h4 {
     transition: 0.5s ease-in-out;
 }
 
+/* Navbar */
 #navLogo,
 #coverLogo {
     transition: 0.5s ease;
@@ -246,4 +247,8 @@ nav ul {
 
 nav ul:hover {
     background-color: rgba(var(--bs-light-rgb), 1);
+}
+
+footer {
+    text-align: center;
 }
