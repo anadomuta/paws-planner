@@ -51,13 +51,15 @@ In addition, the following resources were used:
 2. [Card 2 Image](<https://img-va.myshopline.com/image/store/1679367631642/Portable-Leisure-Outing-Pet-Bolster-Large-Dog-Car-Seat-Bed-(4).jpeg?w=1000&h=1000>)
 3. [Card 3 Image](https://images.perthnow.com.au/publication/B88664503Z/G1Q1B5FFU.2-2.jpg?imwidth=668&impolicy=pn_v3)
 4. [Card 4 Image](https://www.elliespetbarn.com/wp-content/uploads/2013/03/dog-ready-to-travel.jpg)
-5. [Landing Page Background Image by Jonathan Roger on Unsplash](https://unsplash.com/photos/building-beside-body-of-water-during-night-time-LY1eyQMFeyo)
-6. [Second Page Background Image by Pawel Czerwinski on Unsplash](https://unsplash.com/photos/a-white-wall-with-a-white-circle-i0h7EEsOwNQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplas)
-7. [Forum discussion to fix violation error](https://stackoverflow.com/questions/39152877/consider-marking-event-handler-as-passive-to-make-the-page-more-responsive)
+5. [Card 5 Image](https://www.pexels.com/photo/close-up-of-a-yorkie-in-a-car-9783718/)
+6. [Landing Page Background Image by Jonathan Roger on Unsplash](https://unsplash.com/photos/building-beside-body-of-water-during-night-time-LY1eyQMFeyo)
+7. [Second Page Background Image by Pawel Czerwinski on Unsplash](https://unsplash.com/photos/a-white-wall-with-a-white-circle-i0h7EEsOwNQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplas)
+8. [Nested image in dog silhouette by Malte Schmidt on Unsplash](https://unsplash.com/photos/low-light-photography-of-vehicle-crossing-road-between-high-rise-buildings-enGr5YbjQKQ)
+9. [Forum discussion to fix violation error](https://stackoverflow.com/questions/39152877/consider-marking-event-handler-as-passive-to-make-the-page-more-responsive)
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the MIT License.
 
 ## Contributors
 
