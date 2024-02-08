@@ -41,7 +41,6 @@ h4 {
 }
 
 /* jQuery UI */
-
 .ui-autocomplete-category {
     font-weight: bold;
     padding: .2em .4em;
@@ -170,7 +169,6 @@ h4 {
 }
 
 /* Social Tag Buttons */
-
 .btn-socialTag {
     background-color: var(--colSecondary);
     transition: 0.5s ease;
@@ -254,7 +252,6 @@ nav ul:hover {
 }
 
 /* Footer */
-
 footer {
     text-align: center;
 }

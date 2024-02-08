@@ -3,7 +3,6 @@ $(document).ready(function () {
   var searchButton = $("#searchButton");
   var cityInput = $("#locationInput");
   var currentWeather = $("#todayWeather");
-  var weatherContainer = $(".weatherContainer");
 
   // Fetch current weather for a given city
   function fetchCurrentWeather() {
@@ -21,7 +20,7 @@ $(document).ready(function () {
       })
       .then(function (data) {
         // Display current weather conditions for selected city
-        currentWeather.empty();
+        currentWeather.empty(); // Clear previous weather
 
         // Weather Icon
         var weatherTodayIcon = data.weather[0].icon;
@@ -44,11 +43,10 @@ $(document).ready(function () {
         <h4 class="my-2 mx-2"><i class="me-2 bi bi-thermometer-half" style="color: #A26769;"></i> ${tempCelsius} °C</h4>
         <h4 class="my-2 mx-2"><i class="me-2 bi bi-wind" style="color: #41576b;"></i> ${wind} km/h</h4>
         <h4 class="my-2 mb-4 mx-2"><i class="me-2 bi bi-droplet-half" style="color: #99B2DD;"></i>${humidity} %</h4>
-        `)
-        // currentWeather.append(todayIcon, tempCelsius, wind, humidity);
-
+        `);
       });
   }
 
+  // Fetch current weather upon button click
   searchButton.on("click", fetchCurrentWeather);
 });
