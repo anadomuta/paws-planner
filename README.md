@@ -1,5 +1,6 @@
 # Paws Planner
-
+![screenshot-landing-page](https://github.com/anadomuta/paws-planner/assets/112567796/ab777c5d-e745-4be3-bd5e-1839036ed682)
+![screenshot-application](https://github.com/anadomuta/paws-planner/assets/112567796/979f0c4c-b090-4791-8b4f-2573327cea1a)
 ## Overview
 
 Welcome to Paws Planner, your go-to application for planning pet-friendly adventures around the world! Whether you're a pet owner or a pet lover, Paws Planner helps you discover and plan exciting activities for you and your furry friends in any location.
