@@ -1,4 +1,7 @@
 # Paws Planner
+![Screenshot 2024-02-08 at 21 34 18](https://github.com/anadomuta/paws-planner/assets/112567796/6f8d7c10-8bed-4b71-acce-374ecd4588b1)
+![Screenshot 2024-02-08 at 21 38 48](https://github.com/anadomuta/paws-planner/assets/112567796/0ba205d1-9b83-4e18-9985-659a269c805b)
+
 
 ## Overview
 
