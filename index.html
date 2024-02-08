@@ -27,39 +27,57 @@
 
 <body>
       <header id="top">
-            <!-- Jumbotron -->
-            <div class="container-fluid user-select-none d-flex justify-content-center align-items-center" id="home">
-                  <!-- Background Image Cards -->
+            <!-- Background Image Cards -->
+            <section class="container-fluid user-select-none d-flex justify-content-center align-items-center"
+                  id="home">
+                  <!-- Card 1 -->
                   <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard"
                         style="width: 23rem;" id="bgcard1">
-                        <img src="./assets/images/card1.png" class="card-img-top rounded-0 my-5 px-3" alt="Dog in Bus">
+                        <figure>
+                              <img src="./assets/images/card1.png" class="card-img-top rounded-0 my-5 px-3"
+                                    alt="Dog in Bus">
+                        </figure>
                   </div>
+                  <!-- Card 2 -->
                   <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard"
                         style="width: 15rem;" id="bgcard2">
-                        <img src="./assets/images/card2.png" class="card-img-top rounded-0 my-5 px-3"
-                              alt="Puppy in a car">
+                        <figure>
+                              <img src="./assets/images/card2.png" class="card-img-top rounded-0 my-5 px-3"
+                                    alt="Puppy in a car">
+                        </figure>
                   </div>
+                  <!-- Card 3 -->
                   <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard"
                         style="width: 20rem;" id="bgcard3">
-                        <img src="./assets/images/card3.png" class="card-img-top rounded-0 my-5 px-3"
-                              alt="Cat in a cat box">
+                        <figure>
+                              <img src="./assets/images/card3.png" class="card-img-top rounded-0 my-5 px-3"
+                                    alt="Cat in a cat box">
+                        </figure>
                   </div>
+                  <!-- Card 4 -->
                   <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard"
                         style="width: 30rem;" id="bgcard4">
-                        <img src="./assets/images/card4.png" class="card-img-top rounded-0 my-5 px-3"
-                              alt="Dog with sunglasses in an airport">
+                        <figure>
+                              <img src="./assets/images/card4.png" class="card-img-top rounded-0 my-5 px-3"
+                                    alt="Dog with sunglasses in an airport">
+                        </figure>
                   </div>
+                  <!-- Card 5 -->
                   <div class="d-none d-lg-block card position-absolute border border-secondary rounded bgcard"
                         style="width: 18rem;" id="bgcard5">
-                        <img src="./assets/images/card5.png" class="card-img-top rounded-0 my-5 px-3"
-                              alt="Dog looking from a car window">
+                        <figure>
+                              <img src="./assets/images/card5.png" class="card-img-top rounded-0 my-5 px-3"
+                                    alt="Dog looking from a car window">
+                        </figure>
                   </div>
-                  <!-- Primary Card -->
-                  <div class="rounded-5 row container-fluid m-5 border border-secondary" id="homecontainer">
+                  <!-- Jumbotron -->
+                  <article class="rounded-5 row container-fluid m-5 border border-secondary" id="homecontainer">
                         <div class="col-12 col-lg-5 d-flex flex-column justify-content-center p-5" id="searchArea">
                               <div class="d-flex align-items-center justify-content-start p-0 mb-5">
-                                    <img class="me-4" height="50px" width="50px" src="./assets/images/logo.PNG"
-                                          alt="Paws Planner Logo" id="coverLogo">
+                                    <figure>
+                                          <img class="me-4" height="50px" width="50px" src="./assets/images/logo.PNG"
+                                                alt="Paws Planner Logo" id="coverLogo">
+                                    </figure>
                                     <h1 class="pageTitle m-0 text-center">Paws Planner</h1>
                               </div>
                               <h3 class="mb-2">Tired of your daily routine? Don't want to leave the four-legged friends
@@ -68,6 +86,7 @@
                               <h3 class="mb-5">Pawsitively perfect journeys await!</h3>
                               <h2 class="mb-3" style="color: var(--colSecondaryDark)">Where would you like to explore?
                               </h2>
+                              <!-- Search Input -->
                               <h2 class="my-3 d-flex align-items-center"><input id="locationInput"
                                           class="form-control mt-1 border-0" type="text"
                                           placeholder="City, Town, Postcode..."
@@ -75,6 +94,7 @@
                               <h1><button id="searchButton"
                                           class="btn btn px-5 py-2 me-5 rounded text-light position-relative"
                                           type="button"><i class="bi bi-search-heart me-2"></i>Search</button></h1>
+                              <!-- Socials Placeholder -->
                               <div class="mt-5 d-flex justify-content-evenly align-items-center" id="socialTags">
                                     <a target="_blank" href="https://www.facebook.com/"
                                           class="btn btn-socialTag px-1 py-1"><i
@@ -88,9 +108,9 @@
                               </div>
                         </div>
                         <div class="d-none d-lg-block col-lg-7 p-5" id="dogImage"></div>
-                  </div>
-            </div>
-            <!-- End Jumbotron -->
+                  </article>
+                  <!-- End Jumbotron -->
+            </section>
       </header>
 
       <!--- Welcome Modal -->
@@ -100,7 +120,7 @@
                         <div class="modal-header text-center">
                               <h5 class="modal-title fs-1">🐾 Welcome to Paws Planner! 🐾</h5>
                         </div>
-                        <div class="modal-body text-center fs-4">
+                        <article class="modal-body text-center fs-4">
                               <p>... where pet-friendly adventure awaits! 🌟 <br><br> Search any location,
                                     and unveil a world of tail-wagging fun. From charming cafes to scenic spots,
                                     we've
@@ -109,7 +129,7 @@
                                     <br>
                                     Let's make every outing a paw-some memory! 🐶🗺️
                               </p>
-                        </div>
+                        </article>
                         <div class="modal-footer">
                               <button type="button" class="btn btn-info fs-5" id="letsGetStartedBtn">Let's get
                                     started!</button>
@@ -125,8 +145,11 @@
       <nav class="user-select-none p-3 rounded-3 sticky-top d-none customNav" id="navigationBar">
             <ul
                   class="nav py-2 px-3 rounded-3 border navbar-expand-lg d-flex justify-content-start align-items-center sticky-top">
-                  <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4"
-                        style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;" id="navLogo">
+                  <figure>
+                        <img src="./assets/images/logominimal.png" alt="navbar logo" class="img-fluid me-4"
+                              style="object-fit: contain; object-position: center; height: 1.5rem; width: auto;"
+                              id="navLogo">
+                  </figure>
                   <h5 class="ms-2 me-5 my-0" style="font-family: 'Pally', sans-serif; ">Paws Planner</h5>
                   <li class="nav-item mx-3">
                         <a class="btn btn-secondary btn-sm nav-link py-1 px-3" href="#home"
@@ -143,9 +166,9 @@
       </nav>
       <!-- End Navbar -->
 
-      <div class="container-fluid user-select-none mt-5" id="secondPage">
+      <section class="container-fluid user-select-none mt-5" id="secondPage">
             <!-- Map Container -->
-            <div class="row" style="height: 50vh;">
+            <section class="row" style="height: 50vh;">
                   <div class="col-8 mx-auto mh-100 p-0 position-relative">
                         <!-- Map Element -->
                         <div id="mapContainer" class="col-12 w-auto h-100 position-relative top-0 start-0">
@@ -153,7 +176,7 @@
                               </div>
                         </div>
                   </div>
-            </div>
+            </section>
             <!-- Information Container on Searched Location -->
             <section>
                   <div class="row container my-2 mx-auto">
@@ -184,13 +207,13 @@
                                           </button>
                                     </div>
                                     <!-- Container with Places added dynamically using JS -->
-                                    <div class="container-fluid d-flex flex-nowrap p-0 mb-4" id="eatCardContainer">
-                                    </div>
+                                    <article class="container-fluid d-flex flex-nowrap p-0 mb-4" id="eatCardContainer">
+                                    </article>
                               </div>
                         </div>
                   </div>
             </section>
-      </div>
+      </section>
 
 
       <!-- Footer section -->
@@ -201,6 +224,7 @@
                   &copy; 2024 Paws Planner
             </p>
             </div>
+            <!-- Scripts section -->
             <!-- Dayjs -->
             <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
             <!-- Bootstrap -->
