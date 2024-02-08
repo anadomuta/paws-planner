@@ -247,3 +247,7 @@ nav ul {
 nav ul:hover {
     background-color: rgba(var(--bs-light-rgb), 1);
 }
+
+footer {
+    text-align: center;
+}
