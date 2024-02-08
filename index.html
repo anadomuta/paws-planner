@@ -152,14 +152,6 @@
                               <div id="map" class="rounded-5 w-auto h-100 border border-dark">
                               </div>
                         </div>
-                        <!-- Search Button -->
-                        <form type="searcharea2" class="mx-5 position-absolute bottom-0 start-50 translate-middle">
-                              <h1 class="text-center"><input
-                                          class="px-5 py-2 text-center border-dark rounded-3 text-body-light bg-light bg-opacity-75"
-                                          type="text" id="searcharea2" placeholder="Search in the area..."
-                                          style="font-family: 'Cabinet Grotesk', var(--body-font), sans-serif;">
-                              </h1>
-                        </form>
                   </div>
             </div>
             <!-- Information Container on Searched Location -->
@@ -176,7 +168,6 @@
                               <h1 class="m-4 text-center"><i class="bi bi-ticket-detailed me-2"></i> What's on Nearby?
                               </h1>
                               <div class="m-3 border border-dark bgcard rounded-5" id="eatPlaces">
-                                    <!-- <h2 class="m-4 mb-2">Places to Eat</h2> -->
                                     <div class="m-4" id="activeCategories"></div>
                                     <div class="d-none d-flex justify-content-center align-items-center"
                                           id="loadingStatus">
@@ -192,7 +183,7 @@
                                                 <span role="status">No results found.</span>
                                           </button>
                                     </div>
-                                    <!-- container for place to append "places to eat" cards in JS -->
+                                    <!-- Container with Places added dynamically using JS -->
                                     <div class="container-fluid d-flex flex-nowrap p-0 mb-4" id="eatCardContainer">
                                     </div>
                               </div>
