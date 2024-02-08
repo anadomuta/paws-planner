@@ -27,7 +27,7 @@ Clicking on any point of interest will redirect you to links with detailed infor
 
 ## Deployed Site
 
-TBA
+https://anadomuta.github.io/paws-planner/
 
 ## Technologies used
 
