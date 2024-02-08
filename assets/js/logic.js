@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
               $("#loadingStatus").addClass("d-none");
           })
           .catch((error) => console.log("error", error));
-          });
   }
+  
   // Function to fetch current weather for a given city
   function fetchCurrentWeather(city) {
       var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKeyWeather}`;
@@ -138,9 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Check if the modal should be shown
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Check if the modal should be shown per device
   var shouldShowModal = localStorage.getItem("showModal");
   if (shouldShowModal !== "false") {
       // Show modal
@@ -148,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
       welcomeModal.show();
   }
   // Add click event listener to the "Let's get started" button
- $("#letsGetStartedBtn").on("click", function () {
+  $("#letsGetStartedBtn").on("click", function () {
       // Set a flag in localStorage to indicate that the modal has been seen
       localStorage.setItem("showModal", "false");
       // Hide modal
